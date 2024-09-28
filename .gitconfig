@@ -1,0 +1,32 @@
+[user]
+  name = Benjamin Schmidt
+  email = benndt.dev@gmail.com
+[core]
+  autocrlf = input
+  editor = nano
+  compression = 9
+  pager = delta
+[push]
+  default = current
+[init]
+  defaultBranch = main
+[interactive]
+  diffFilter = delta --color-only
+[add.interactive]
+  useBuiltin = false
+[include]
+  path = ~/.config/delta/themes/catppuccin.gitconfig
+[delta]
+  navigate = true
+  light = false
+  side-by-side = true
+  line-numbers = true
+  features = catppuccin-mocha
+[merge]
+  conflictstyle = diff3
+  renameLimit = 0
+[diff]
+  colorMoved = default
+  renameLimit = 0
+[pull]
+  rebase = false
