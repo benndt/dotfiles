@@ -74,3 +74,6 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# change dir to dev
+cd $DEV
