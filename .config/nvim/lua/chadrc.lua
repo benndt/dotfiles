@@ -5,13 +5,13 @@
 local M = {}
 
 M.base46 = {
+  theme = "catppuccin",
   integrations = {
     "rainbowdelimiters",
   }
 }
 
 M.ui = {
-  theme = "catppuccin",
   statusline = {
     theme = "minimal",
   },

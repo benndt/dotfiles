@@ -8,6 +8,8 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CUSTOM="$HOME/.config/oh-my-zsh"
 export DEV="/mnt/c/Users/Benn/Documents/Dev"
+export PATH=/snap/bin:$PATH
+export PATH=/home/benndt/.local/bin:$PATH
 
 # zsh configs
 ZSH_THEME="zen"
