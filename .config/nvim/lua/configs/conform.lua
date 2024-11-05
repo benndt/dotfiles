@@ -1,5 +1,7 @@
 local options = {
   formatters_by_ft = {
+    gd = { "gdformat" },
+    gdscript = { "gdformat" },
     json = { "yq" },
     lua = { "stylua" },
     yaml = { "yq" },
