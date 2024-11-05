@@ -23,7 +23,7 @@ return {
         dotfiles = false,
         git_ignored = false,
       },
-    }
+    },
   },
   {
     "williamboman/mason.nvim",
@@ -44,6 +44,7 @@ return {
         "bash",
         "gdscript",
         "gdshader",
+        "godot_resource",
         "json",
         "lua",
         "tmux",
