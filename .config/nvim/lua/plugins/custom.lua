@@ -2,7 +2,9 @@ local plugins = {
   {
     "mistricky/codesnap.nvim",
     build = "make",
-    cmd = { 'CodeSnap' },
+    cmd = {
+      "CodeSnap",
+    },
     opts = {
       watermark = "",
       bg_theme = "grape",

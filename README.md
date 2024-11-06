@@ -7,7 +7,7 @@
 Add symlinks for all files with `stow`.
 
 ```bash
-stow .
+stow . --target="/home/benndt"
 ```
 
 ## Dependencies
