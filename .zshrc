@@ -1,15 +1,14 @@
 # envs
+export DEV="/mnt/c/Users/Benn/Documents/Dev"
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
 export HISTTIMEFORMAT="%d/%m/%y %T "
+export PATH=/snap/bin:/home/benndt/.local/bin:$PATH
 export XDG_CONFIG_HOME="$HOME/.config"
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CUSTOM="$HOME/.config/oh-my-zsh"
-export DEV="/mnt/c/Users/Benn/Documents/Dev"
-export PATH=/snap/bin:$PATH
-export PATH=/home/benndt/.local/bin:$PATH
 
 # zsh configs
 ZSH_THEME="zen"
@@ -50,6 +49,7 @@ zstyle ':omz:plugins:alias-finder' cheaper yes
 alias c="clear"
 alias dev="cd $DEV"
 alias open-template="DISABLE_AUTO_TITLE='true' tmuxp load -y"
+alias open-url="cmd.exe /c start"
 alias p="open-project"
 alias tks="tmux kill-server"
 
@@ -76,4 +76,4 @@ eval "$(zoxide init --cmd cd zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # change dir to dev
-cd $DEV
+dev

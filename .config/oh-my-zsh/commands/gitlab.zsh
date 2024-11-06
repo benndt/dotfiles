@@ -6,5 +6,5 @@ gitlab() {
 
   local https_url="https://${host}/${ssh_url#*:}"
 
-  google-chrome "${https_url}" > /dev/null 2>&1
+  open-url "${https_url}"
 }
