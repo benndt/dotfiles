@@ -8,6 +8,7 @@ local servers = {
   "bashls",
   "gdshader_lsp",
   "lua_ls",
+  "markdown_oxide",
   "yamlls",
 }
 
@@ -19,9 +20,9 @@ for _, lsp in ipairs(servers) do
   }
 end
 
-lspconfig.gdscript.setup({
-    on_attach = on_attach,
-    on_init = on_init,
-    capabilities = capabilities,
-    cmd = { "godot-wsl-lsp", "--useMirroredNetworking", "--host", "localhost" },
-})
+lspconfig.gdscript.setup {
+  on_attach = on_attach,
+  on_init = on_init,
+  capabilities = capabilities,
+  cmd = { "godot-wsl-lsp", "--useMirroredNetworking", "--host", "localhost" },
+}

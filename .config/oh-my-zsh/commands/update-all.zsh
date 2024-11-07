@@ -11,12 +11,12 @@ update-all() {
     ~/.tmux/plugins/tpm/bin/update_plugins all
   fi
 
-  if command -v -- snap > /dev/null 2>&1; then
+  if command -v -- snap >/dev/null 2>&1; then
     print "$fg_bold[cyan]Update snap packages$reset_color"
     sudo snap refresh
   fi
 
-  if command -v -- omz > /dev/null 2>&1; then
+  if command -v -- omz >/dev/null 2>&1; then
     print "$fg_bold[cyan]Update oh-my-zsh$reset_color"
     omz update
   fi

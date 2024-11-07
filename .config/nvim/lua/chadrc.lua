@@ -8,7 +8,7 @@ M.base46 = {
   theme = "catppuccin",
   integrations = {
     "rainbowdelimiters",
-  }
+  },
 }
 
 M.ui = {
