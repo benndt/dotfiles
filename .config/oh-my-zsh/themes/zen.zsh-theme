@@ -1,7 +1,10 @@
 prompt_segment() {
   local fg
+  
   [[ -n $1 ]] && fg="%F{$1}" || fg="%f"
-    echo -n "%{$fg%} "
+
+  echo -n "%{$fg%} "
+  
   [[ -n $2 ]] && echo -n "$2"
 }
 

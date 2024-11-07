@@ -1,11 +1,11 @@
 local options = {
   formatters_by_ft = {
-    bash = { "shellharden" },
     gd = { "gdformat" },
     gdscript = { "gdformat" },
     json = { "jq" },
     lua = { "stylua" },
     markdown = { "mdformat" },
+    sh = { "shfmt", "shellharden" },
     yaml = { "yq" },
     zsh = { "shellharden" },
   },

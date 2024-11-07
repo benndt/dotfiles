@@ -41,6 +41,7 @@ return {
         "markdown-oxide",
         "mdformat",
         "shellharden",
+        "shfmt",
         "stylua",
         "yaml-language-server",
         "yq",

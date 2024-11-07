@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+gitlab() {
+  local ssh_url host https_url
+
+  ssh_url=$(git remote get-url --push origin)
+  host=${ssh_url#*@}
+  host=${host%:*}
+
+  https_url="https://${host}/${ssh_url#*:}"
+
+  open-url "$https_url"
+}
