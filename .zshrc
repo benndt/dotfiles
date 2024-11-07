@@ -54,7 +54,7 @@ alias p="open-project"
 alias tks="tmux kill-server"
 
 # commands
-find "$ZSH_CUSTOM"/commands/*.zsh | while read -r script; do
+find "$ZSH_CUSTOM"/commands/*.sh | while read -r script; do
   if [[ -f "$script" ]]; then
     source "$script"
   fi
@@ -74,6 +74,3 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# change dir to dev
-dev

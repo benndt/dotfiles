@@ -1,5 +1,9 @@
+#!/usr/bin/env bash
+
 open-project() {
-  local project_name=$(basename "$PWD")
+  local project_name
+
+  project_name=$(basename "$PWD")
 
   if [ "$1" ]; then
     open-template "$1"
