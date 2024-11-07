@@ -2,7 +2,7 @@ prompt_segment() {
   local fg
   [[ -n $1 ]] && fg="%F{$1}" || fg="%f"
     echo -n "%{$fg%} "
-  [[ -n $2 ]] && echo -n $2
+  [[ -n $2 ]] && echo -n "$2"
 }
 
 prompt_newline() {
@@ -95,7 +95,7 @@ prompt_status() {
 }
 
 prompt_execution_time() {
-  [[ $(echo "$command_elapsed>=5.0" | bc -l) -eq 1 ]] && prompt_segment yellow "$(printf %.1f $command_elapsed | tr , .)s"
+  [[ $(echo "$command_elapsed>=5.0" | bc -l) -eq 1 ]] && prompt_segment yellow "$(printf %.1f "$command_elapsed" | tr , .)s"
 }
 
 preexec() {

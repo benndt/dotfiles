@@ -2,9 +2,9 @@
 
 ## Usage
 
-**All dependencies should be installed before you run stow.**
+**:warning: All dependencies should be installed before you run stow.**
 
-Add symlinks for all files with `stow`.
+Add symlinks for all files in `.` to the target folder:
 
 ```bash
 stow . --target="/home/benndt"
@@ -12,28 +12,38 @@ stow . --target="/home/benndt"
 
 ## Dependencies
 
-### btop
-- `catppuccin/btop` (theme: `mocha`)
+All [catppuccin](https://github.com/catppuccin/catppuccin) dependencies should be downloaded with theme `mocha`.
 
-### git
-- `bat` (for delta themes)
-- `catppuccin/bat` 
-- `catppuccin/delta`
-- `git-delta`
+### [btop](https://github.com/artistocratos/btop)
+- [catppuccin/btop](https://github.com/catppuccin/btop)
 
-### nvim
-- `ripgrep` (for telescope plugin)
+### [git](https://git-scm.com/downloads/linux)
+- [bat](https://github.com/sharkdp/bat)
+- [catppuccin/bat](https://github.com/catppuccin/bat)
+- [catppuccin/delta](https://github.com/catppuccin/delta)
+- [git-delta](https://github.com/dandavison/delta)
 
-### tmux
-- `tmp`
+### [godot](https://godotengine.org/)
+- [catppuccin/godot](https://github.com/catppuccin/godot)
+- [gdtoolkit](https://github.com/Scony/godot-gdscript-toolkit)
 
-### zsh
-- `catppuccin/zsh-syntax-highlighting` (theme: `mocha`)
-- `fzf`
-- `fzf-tab`
-- `google-chrome` (for some commands)
-- `oh-my-zsh`
-- `thefuck` (for `f` alias)
-- `zsh-autosuggestions`
-- `zsh-completions`
-- `zsh-syntax-highlighting`
+### [nvim](https://github.com/neovim/neovim) / [nvchad](https://nvchad.com/)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
+
+### [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
+- [catppuccin/zsh-syntax-highlighting](https://github.com/catppuccin/zsh-syntax-highlighting)
+- [fzf-tab](https://github.com/Aloxaf/fzf-tab)
+- [fzf](https://github.com/junegunn/fzf)
+- [thefuck](https://github.com/nvbn/thefuck)
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+- [zsh-completions](https://github.com/zsh-users/zsh-completions)
+- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+
+### [stow](https://www.gnu.org/software/stow)
+
+### [tmux](https://github.com/tmux/tmux)
+- [tmp](https://github.com/tmux-plugins/tpm)
+
+### windows-terminal
+- [catppuccin/windows-terminal](https://github.com/catppuccin/windows-terminal)
+- [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads)

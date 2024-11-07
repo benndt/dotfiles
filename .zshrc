@@ -29,7 +29,7 @@ plugins=(
 fpath+=$ZSH_CUSTOM/plugins/zsh-completions/src
 fpath+=$ZSH_CUSTOM/completions
 
-source $ZSH/oh-my-zsh.sh
+source "$ZSH"/oh-my-zsh.sh
 
 # keybindings
 bindkey -e
@@ -54,7 +54,7 @@ alias p="open-project"
 alias tks="tmux kill-server"
 
 # commands
-for script in $(find $ZSH_CUSTOM/commands/*.zsh); do
+find "$ZSH_CUSTOM"/commands/*.zsh | while read -r script; do
   if [[ -f "$script" ]]; then
     source "$script"
   fi
@@ -67,7 +67,7 @@ source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 autoload -Uz compinit && compinit
 
 # thefuck
-eval $(thefuck --alias f)
+eval "$(thefuck --alias f)"
 
 # zoxide
 eval "$(zoxide init --cmd cd zsh)"
