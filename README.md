@@ -14,7 +14,7 @@ stow . --target="/home/benndt"
 
 All [catppuccin](https://github.com/catppuccin/catppuccin) dependencies should be downloaded with theme `mocha`.
 
-### [btop](https://github.com/artistocratos/btop)
+### [btop](https://github.com/aristocratos/btop)
 
 - [catppuccin/btop](https://github.com/catppuccin/btop)
 
@@ -40,6 +40,7 @@ All [catppuccin](https://github.com/catppuccin/catppuccin) dependencies should b
 - [fzf-tab](https://github.com/Aloxaf/fzf-tab)
 - [fzf](https://github.com/junegunn/fzf)
 - [thefuck](https://github.com/nvbn/thefuck)
+- [zoxide](https://github.com/ajeetdsouza/zoxide)
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 - [zsh-completions](https://github.com/zsh-users/zsh-completions)
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
@@ -49,6 +50,8 @@ All [catppuccin](https://github.com/catppuccin/catppuccin) dependencies should b
 ### [tmux](https://github.com/tmux/tmux)
 
 - [tmp](https://github.com/tmux-plugins/tpm)
+
+### [tmuxp](https://github.com/tmux-python/tmuxp)
 
 ### windows-terminal
 
