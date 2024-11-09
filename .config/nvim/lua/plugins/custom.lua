@@ -1,4 +1,4 @@
-local plugins = {
+return {
   {
     "mistricky/codesnap.nvim",
     build = "make",
@@ -25,4 +25,3 @@ local plugins = {
     opts = {},
   },
 }
-return plugins
