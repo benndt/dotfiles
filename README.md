@@ -14,6 +14,10 @@ stow . --target="/home/benndt"
 
 All [catppuccin](https://github.com/catppuccin/catppuccin) dependencies should be downloaded with theme `mocha`.
 
+### [aseprite](https://www.aseprite.org/)
+
+- [catppuccin/aseprite](https://github.com/catppuccin/aseprite)
+
 ### [btop](https://github.com/aristocratos/btop)
 
 - [catppuccin/btop](https://github.com/catppuccin/btop)

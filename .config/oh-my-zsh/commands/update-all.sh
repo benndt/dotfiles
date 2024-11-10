@@ -129,8 +129,10 @@ update-all() {
   sudo apt autoremove -f
 
   print "${fg_bold[cyan]}Manual updates$reset_color"
-  print "${fg[magenta]}${link_start}https://www.nerdfonts.com/font-downloads${link_description}JetBrainsMono Nerd Font${link_end}$reset_color"
-  print "${fg[magenta]}${link_start}https://godotengine.org/${link_description}Godot${link_end}$reset_color"
-  print "${fg[magenta]}${link_start}https://github.com/catppuccin/windows-terminal${link_description}catppuccin/windows-terminal${link_end}$reset_color"
+  print "${fg[magenta]}${link_start}https://www.aseprite.org/${link_description}aseprite${link_end}$reset_color"
+  print "${fg[magenta]}${link_start}https://github.com/catppuccin/aseprite${link_description}catppuccin/aseprite${link_end}$reset_color"
   print "${fg[magenta]}${link_start}https://github.com/catppuccin/godot${link_description}catppuccin/godot${link_end}$reset_color"
+  print "${fg[magenta]}${link_start}https://github.com/catppuccin/windows-terminal${link_description}catppuccin/windows-terminal${link_end}$reset_color"
+  print "${fg[magenta]}${link_start}https://godotengine.org/${link_description}Godot${link_end}$reset_color"
+  print "${fg[magenta]}${link_start}https://www.nerdfonts.com/font-downloads${link_description}JetBrainsMono Nerd Font${link_end}$reset_color"
 }

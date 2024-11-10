@@ -9,5 +9,5 @@ gitlab() {
 
   https_url="https://${host}/${ssh_url#*:}"
 
-  open-url "$https_url"
+  open "$https_url"
 }

@@ -49,7 +49,7 @@ zstyle ':omz:plugins:alias-finder' cheaper yes
 alias c="clear"
 alias dev="cd $DEV"
 alias open-template="DISABLE_AUTO_TITLE='true' tmuxp load -y"
-alias open-url="cmd.exe /c start"
+alias open="cmd.exe /c start"
 alias p="open-project"
 alias tks="tmux kill-server"
 
