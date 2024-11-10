@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
 
 # Godot
-open-url https://godotengine.org/download/windows/
+open https://godotengine.org/download/windows/
+
+# aseprite
+open https://www.aseprite.org/
 
 # JetBrains Font
-open-url https://www.nerdfonts.com/font-downloads
+open https://www.nerdfonts.com/font-downloads
 
 # apt
 sudo apt install \
@@ -71,7 +74,10 @@ mkdir -p "$XDG_CONFIG_HOME/btop/themes"
 wget -qO- https://github.com/catppuccin/btop/releases/download/1.0.0/themes.tar.gz | tar -xzv -C "$XDG_CONFIG_HOME/btop/themes" --strip-components=1
 
 # catppuccin/windows-terminal
-open-url https://github.com/catppuccin/windows-terminal
+open https://github.com/catppuccin/windows-terminal
 
 # catppuccin/godot
-open-url https://github.com/catppuccin/godot
+open https://github.com/catppuccin/godot
+
+# catppuccin/aseprite
+open https://github.com/catppuccin/aseprite
