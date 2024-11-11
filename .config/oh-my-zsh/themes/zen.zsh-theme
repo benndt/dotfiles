@@ -1,6 +1,5 @@
 prompt_segment() {
   local fg
-  
   [[ -n $1 ]] && fg="%F{$1}" || fg="%f"
 
   echo -n "%{$fg%} "
@@ -34,7 +33,7 @@ prompt_git() {
   local PL_BRANCH_CHAR
   local ref dirty mode repo_path
 
-   if [[ "$(command git rev-parse --is-inside-work-tree 2>/dev/null)" = "true" ]]; then
+  if [[ "$(command git rev-parse --is-inside-work-tree 2>/dev/null)" = "true" ]]; then
     repo_path=$(command git rev-parse --git-dir 2>/dev/null)
     dirty=$(parse_git_dirty)
     ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
@@ -98,6 +97,8 @@ prompt_status() {
 }
 
 prompt_execution_time() {
+  setopt promptsubst
+
   [[ $(echo "$command_elapsed>=5.0" | bc -l) -eq 1 ]] && prompt_segment yellow "$(printf %.1f "$command_elapsed" | tr , .)s"
 }
 
