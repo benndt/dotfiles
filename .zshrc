@@ -44,6 +44,7 @@ zstyle ':completion:*:git-checkout:*' sort false
 zstyle ':omz:plugins:alias-finder' autoload yes
 zstyle ':omz:plugins:alias-finder' exact yes
 zstyle ':omz:plugins:alias-finder' cheaper yes
+zstyle ':omz:update' verbose minimal
 
 # aliases
 alias c="clear"

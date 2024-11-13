@@ -7,7 +7,7 @@
 Add symlinks for all files in `.` to the target folder:
 
 ```bash
-stow . --target="/home/benndt"
+stow . --target="$HOME" --no-folding
 ```
 
 ## Dependencies
