@@ -6,7 +6,7 @@ local options = {
     lua = { "stylua" },
     markdown = { "mdformat" },
     sh = { "shfmt", "shellharden" },
-    yaml = { "yq" },
+    yaml = { "yamlfmt" },
     zsh = { "shellharden" },
   },
 

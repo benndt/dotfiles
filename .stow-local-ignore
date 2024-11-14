@@ -1,4 +1,4 @@
 .gitignore
 .git
+.yamlfmt.yaml
 README.md
-install.sh
