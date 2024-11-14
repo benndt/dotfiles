@@ -45,6 +45,7 @@ return {
         "shfmt",
         "stylua",
         "yaml-language-server",
+        "yamlfmt",
         "yq",
       },
     },
