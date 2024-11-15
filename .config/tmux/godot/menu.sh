@@ -6,8 +6,8 @@ show_menu() {
     "gdformat" f "send-keys 'gdformat .' c-m" \
     "gdlint" l "send-keys 'gdlint .' c-m" \
     "" \
-    "godot" g "send-keys 'open \"\" \"C:\Godot_v4.3\Godot_v4.3-stable_win64.exe\" --editor' c-m" \
-    "aseprite" a "send-keys 'open \"\" \"C:\Program Files\Aseprite\Aseprite.exe\"' c-m" \
+    "godot" g "send-keys 'godot' c-m" \
+    "aseprite" a "send-keys 'aseprite' c-m" \
     "nvim" n "send-keys 'nvim' c-m"
 }
 
