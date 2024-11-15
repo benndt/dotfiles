@@ -47,7 +47,7 @@ _get_current_version() {
   local name="$1"
   local command="$2"
 
-  if [ "$command" != null ]; then
+  if [ "$command" != "" ]; then
     "$command" -V | sed -n 's/.*'"$(basename "$name")"' \([0-9.]*\).*/\1/p'
     return
   fi

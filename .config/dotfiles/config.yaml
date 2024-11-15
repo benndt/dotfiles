@@ -45,11 +45,10 @@ packages:
     - name: ohmyzsh
       install_cmd: |
         sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-      update_cmd: |
-        omz update | cat
+      update_cmd: omz update | cat
     - name: tpm
       install_cmd: |
-        git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+        git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm &&
         ~/.tmux/plugins/tpm/bin/install_plugins all
       update_cmd: |
         ~/.tmux/plugins/tpm/bin/update_plugins all
@@ -84,18 +83,18 @@ packages:
     - name: catppuccin/zsh-syntax-highlighting
       type: commit
       cmd: |
-        rm "$HOME/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh"
+        rm "$HOME/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh" &&
         wget --no-verbose -P "$HOME/.zsh/" https://github.com/catppuccin/zsh-syntax-highlighting/raw/main/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
     - name: catppuccin/bat
       type: commit
       cmd: |
-        rm "$(bat --config-dir)/themes/Catppuccin Mocha.tmTheme"
-        wget --no-verbose -P "$(bat --config-dir)/themes" https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Mocha.tmTheme
+        rm "$(bat --config-dir)/themes/Catppuccin Mocha.tmTheme" &&
+        wget --no-verbose -P "$(bat --config-dir)/themes" https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Mocha.tmTheme &&
         bat cache --build
     - name: catppuccin/delta
       type: commit
       cmd: |
-        rm "$HOME/.config/delta/themes/catppuccin.gitconfig"
+        rm "$HOME/.config/delta/themes/catppuccin.gitconfig" &&
         wget --no-verbose -P "$HOME/.config/delta/themes" https://github.com/catppuccin/delta/raw/main/catppuccin.gitconfig
     - name: catppuccin/btop
       type: release
