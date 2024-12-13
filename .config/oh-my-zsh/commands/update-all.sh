@@ -7,8 +7,8 @@ _update_apt_packages() {
   sudo apt -qq update
 
   _print_info "Update apt packages"
-  sudo apt -qq upgrade
-  sudo apt -qq dist-upgrade
+  sudo apt -qq upgrade -y
+  sudo apt -qq dist-upgrade -y
 
   _print_info "Remove unused and unavailable apt packages"
   sudo apt -qq clean

@@ -42,16 +42,14 @@ packages:
       link: https://github.com/catppuccin/windows-terminal
 
   self_managed:
-    - name: ohmyzsh
-      install_cmd: |
-        sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-      update_cmd: omz update | cat
     - name: tpm
       install_cmd: |
         git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm &&
         ~/.tmux/plugins/tpm/bin/install_plugins all
-      update_cmd: |
-        ~/.tmux/plugins/tpm/bin/update_plugins all
+      update_cmd: "~/.tmux/plugins/tpm/bin/update_plugins all"
+    - name: ohmyzsh
+      install_cmd: "sh -c \"$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\""
+      update_cmd: "local result=$(omz update) && echo $result"
 
   git_repositories:
     - name: fzf
