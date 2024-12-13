@@ -1,4 +1,5 @@
 .gitignore
 .git
 .yamlfmt.yaml
+.windows
 README.md
