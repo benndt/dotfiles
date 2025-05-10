@@ -3,7 +3,7 @@
 projects() {
   local project_name
 
-  project_name=$(find "$DEV" -maxdepth 1 -mindepth 1 -type d -exec basename {} \; | sort | fzf-tmux -p --reverse)
+  project_name=$(find "$DEV" -maxdepth 2 -type d -exec test -e '{}/.git' \; -print | sed -e "s|$DEV/||" | sort | fzf-tmux -p --reverse)
 
   if [ "$project_name" = "" ]; then
     return
