@@ -51,7 +51,7 @@ zstyle ':omz:update' verbose minimal
 alias aseprite="open '' 'C:\Program Files\Aseprite\Aseprite.exe'"
 alias c="clear"
 alias dev="cd $DEV"
-alias godot="open '' 'C:\Godot_v4.3\Godot_v4.3-stable_win64.exe' --editor"
+alias godot="open '' 'C:\Godot_v4.4\Godot_v4.4-stable_win64.exe' --editor"
 alias open-template="DISABLE_AUTO_TITLE='true' tmuxp load -y"
 alias open="cmd.exe /c start"
 alias p="open-project"
