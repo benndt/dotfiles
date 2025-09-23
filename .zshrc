@@ -56,7 +56,7 @@ alias open-template="DISABLE_AUTO_TITLE='true' tmuxp load -y"
 alias open="cmd.exe /c start"
 alias p="open-project"
 alias tks="tmux kill-server"
-alias obsidian-link "cmd.exe /c mklink /J '%CD%\.obsidian' '%USERPROFILE%\Documents\Dev\dotfiles\.config\obsidian'"
+alias obsidian-link="cmd.exe /c mklink /J '%CD%\.obsidian' '%USERPROFILE%\Documents\Dev\dotfiles\.config\obsidian'"
 
 # commands
 find "$ZSH_CUSTOM"/commands/*.sh | while read -r script; do
