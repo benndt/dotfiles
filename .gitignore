@@ -1,2 +1,18 @@
 *~
 .windows
+
+# Obsidian
+.space
+.trash
+.obsidian
+.makemd
+
+# Obsidian Workspaces
+.config/obsidian/workspace.json
+.config/obsidian/workspace-mobile.json
+
+# Obsidian Plugins
+.config/obsidian/themes/*/**
+.config/obsidian/plugins/*/**
+!.config/obsidian/plugins/*/data.json
+.config/obsidian/plugins/make-md/data.json

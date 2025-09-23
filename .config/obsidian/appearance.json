@@ -1,0 +1,12 @@
+{
+  "cssTheme": "Catppuccin",
+  "interfaceFontFamily": "Segoe UI Variable Display",
+  "textFontFamily": "Segoe UI Variable Display",
+  "monospaceFontFamily": "Segoe UI Variable Display",
+  "baseFontSize": 16,
+  "showRibbon": false,
+  "nativeMenus": false,
+  "enabledCssSnippets": [
+    "editor"
+  ]
+}
