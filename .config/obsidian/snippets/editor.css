@@ -1,0 +1,15 @@
+.cm-s-obsidian span.cm-inline-code {
+  color: rgb(var(--ctp-red));
+}
+
+.markdown-rendered code {
+  color: rgb(var(--ctp-red));
+}
+
+.markdown-rendered pre code {
+  color: var(--code-normal);
+}
+
+.mk-tree-item.is-active:not(.clone) .mk-path-icon svg  {
+    --icon-color: var(--nav-item-color-active) !important;
+}

@@ -48,14 +48,15 @@ zstyle ':omz:plugins:alias-finder' cheaper yes
 zstyle ':omz:update' verbose minimal
 
 # aliases
-alias aseprite="open '' 'C:\Program Files\Aseprite\Aseprite.exe'"
+alias aseprite="open '' '%ProgramFiles%\Aseprite\Aseprite.exe'"
 alias c="clear"
 alias dev="cd $DEV"
-alias godot="open '' 'C:\Godot_v4.4\Godot_v4.4-stable_win64.exe' --editor"
+alias godot="open '' '%HOMEDRIVE%:\Godot_v4.5\Godot_v4.5-stable_win64.exe' --editor"
 alias open-template="DISABLE_AUTO_TITLE='true' tmuxp load -y"
 alias open="cmd.exe /c start"
 alias p="open-project"
 alias tks="tmux kill-server"
+alias obsidian-link "cmd.exe /c mklink /J '%CD%\.obsidian' '%USERPROFILE%\Documents\Dev\dotfiles\.config\obsidian'"
 
 # commands
 find "$ZSH_CUSTOM"/commands/*.sh | while read -r script; do

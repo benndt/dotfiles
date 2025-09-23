@@ -2,9 +2,11 @@ symlink_command: stow . --target="$HOME" --no-folding
 
 packages:
   apt:
-    - tmux
-    - stow
+    - fd-find
     - git
+    - ripgrep
+    - stow
+    - tmux
 
   pip:
     - thefuck
