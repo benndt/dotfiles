@@ -2,7 +2,8 @@
 
 ## Usage
 
-**:warning: All dependencies should be installed before you run stow.**
+> [!WARNING]  
+> All dependencies should be installed before you run stow.
 
 Add symlinks for all files in `.` to the target folder:
 
