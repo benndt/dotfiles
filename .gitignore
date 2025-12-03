@@ -1,5 +1,4 @@
 *~
-.windows
 
 # Obsidian
 .space
@@ -8,11 +7,12 @@
 .makemd
 
 # Obsidian Workspaces
-.config/obsidian/workspace.json
-.config/obsidian/workspace-mobile.json
+.template/obsidian/workspace.json
+.template/obsidian/workspace-mobile.json
 
 # Obsidian Plugins
-.config/obsidian/themes/*/**
-.config/obsidian/plugins/*/**
-!.config/obsidian/plugins/*/data.json
-.config/obsidian/plugins/make-md/data.json
+.template/obsidian/plugins/*/**
+!.template/obsidian/plugins/*/data.json
+
+# Obsidian Themes
+.template/obsidian/themes/*/**
