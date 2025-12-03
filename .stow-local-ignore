@@ -1,5 +1,5 @@
 .gitignore
 .git
+.template
 .yamlfmt.yaml
-.windows
 README.md
