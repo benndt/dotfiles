@@ -1,34 +1,15 @@
 require("nvchad.configs.lspconfig").defaults()
 
-local lspconfig = require "lspconfig"
-local nvlsp = require "nvchad.configs.lspconfig"
-
 local servers = {
   "bashls",
+  "gdscript",
   "gdshader_lsp",
+  "lua_ls",
   "markdown_oxide",
   "yamlls",
 }
 
-for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
-    on_attach = nvlsp.on_attach,
-    on_init = nvlsp.on_init,
-    capabilities = nvlsp.capabilities,
-  }
-end
-
-lspconfig.gdscript.setup {
-  on_attach = nvlsp.on_attach,
-  on_init = nvlsp.on_init,
-  capabilities = nvlsp.capabilities,
-  cmd = { "godot-wsl-lsp", "--useMirroredNetworking", "--host", "localhost" },
-}
-
-lspconfig.lua_ls.setup {
-  on_attach = nvlsp.on_attach,
-  on_init = nvlsp.on_init,
-  capabilities = nvlsp.capabilities,
+vim.lsp.config("lua_ls", {
   settings = {
     Lua = {
       diagnostics = {
@@ -36,4 +17,10 @@ lspconfig.lua_ls.setup {
       },
     },
   },
-}
+})
+
+vim.lsp.config("gdscript", {
+  cmd = { "godot-wsl-lsp", "--useMirroredNetworking", "--host", "localhost" },
+})
+
+vim.lsp.enable(servers)
