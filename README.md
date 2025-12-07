@@ -3,17 +3,31 @@
 ## Usage
 
 > [!WARNING]  
-> All dependencies should be installed before you run stow.
+> All requirements should be installed before you run stow.
 
 Add symlinks for all files in `.` to the target folder:
 
 ```bash
 stow . --target="$HOME" --no-folding
 ```
+### Modifications
 
-## Dependencies
+> [!HINT]  
+> The dotfiles are heavily customized to my needs and can either be copied and modified or used as inspiration.
 
-All [catppuccin](https://github.com/catppuccin/catppuccin) dependencies should be downloaded with theme `mocha`.
+If you want to copy it, the following files should be adjusted:
+- `.config/nvim/lua/configs/lspconfig.lua`
+	- Remove the gdscript config if you work on Linux.
+- `.gitconfig`
+	- Use your own user data
+- `.zshrc`
+	- Change the `DEV` env to your main working directory
+	- Change the alias for `aseprite`, `godot` and `open` 
+
+If you don't use `aseprite` and `godot` you can also remove more configs.
+## Requirements
+
+- All [catppuccin](https://github.com/catppuccin/catppuccin) dependencies should be downloaded with theme `mocha`.
 
 ### [aseprite](https://www.aseprite.org/)
 
@@ -54,9 +68,8 @@ All [catppuccin](https://github.com/catppuccin/catppuccin) dependencies should b
 
 ### [tmux](https://github.com/tmux/tmux)
 
-- [tmp](https://github.com/tmux-plugins/tpm)
-
-### [tmuxp](https://github.com/tmux-python/tmuxp)
+- [tmuxp](https://github.com/tmux-python/tmuxp)
+- [tpm](https://github.com/tmux-plugins/tpm)
 
 ### windows-terminal
 
