@@ -2,7 +2,7 @@
 
 ## Usage
 
-> [!WARNING]  
+> [!WARNING]
 > All requirements should be installed before you run stow.
 
 Add symlinks for all files in `.` to the target folder:
@@ -10,21 +10,24 @@ Add symlinks for all files in `.` to the target folder:
 ```bash
 stow . --target="$HOME" --no-folding
 ```
+
 ### Modifications
 
-> [!HINT]  
+> [!NOTE]
 > The dotfiles are heavily customized to my needs and can either be copied and modified or used as inspiration.
 
 If you want to copy it, the following files should be adjusted:
+
 - `.config/nvim/lua/configs/lspconfig.lua`
-	- Remove the gdscript config if you work on Linux.
+  - Remove the gdscript config if you work on Linux.
 - `.gitconfig`
-	- Use your own user data
+  - Use your own user data
 - `.zshrc`
-	- Change the `DEV` env to your main working directory
-	- Change the alias for `aseprite`, `godot` and `open` 
+  - Change the `DEV` env to your main working directory
+  - Change the alias for `aseprite`, `godot` and `open`
 
 If you don't use `aseprite` and `godot` you can also remove more configs.
+
 ## Requirements
 
 - All [catppuccin](https://github.com/catppuccin/catppuccin) dependencies should be downloaded with theme `mocha`.
