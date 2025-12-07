@@ -6,13 +6,3 @@
 .obsidian
 .makemd
 
-# Obsidian Workspaces
-.template/obsidian/workspace.json
-.template/obsidian/workspace-mobile.json
-
-# Obsidian Plugins
-.template/obsidian/plugins/*/**
-!.template/obsidian/plugins/*/data.json
-
-# Obsidian Themes
-.template/obsidian/themes/*/**
