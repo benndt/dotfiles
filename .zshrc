@@ -1,4 +1,5 @@
 # envs
+export ASEPRITE_BIN="/mnt/c/Program Files/Aseprite/Aseprite.exe"
 export DEV="/mnt/c/Users/Benn/Documents/Dev"
 export DOTFILES_CONFIG="$HOME/.config/dotfiles"
 export FZF_DEFAULT_OPTS=" \
