@@ -8,6 +8,7 @@ export FZF_DEFAULT_OPTS=" \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
 export GODOT_BIN="/mnt/c/Godot_v4.5/Godot_v4.5.1-stable_win64.exe"
 export HISTTIMEFORMAT="%d/%m/%y %T "
+export JUST_COMMAND_COLOR='green'
 export PATH=/snap/bin:$HOME/.local/bin:$PATH
 export XDG_CONFIG_HOME="$HOME/.config"
 export ZSH="$HOME/.oh-my-zsh"
@@ -68,6 +69,9 @@ done
 
 # catppuccin_mocha-zsh-syntax-highlighting
 source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
+
+# just
+source ~/.zsh/just.zsh
 
 # Load completions
 autoload -Uz compinit && compinit
