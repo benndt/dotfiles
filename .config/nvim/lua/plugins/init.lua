@@ -17,6 +17,16 @@ return {
       dofile(vim.g.base46_cache .. "rainbowdelimiters")
     end,
   },
+  --{
+  --  "MeanderingProgrammer/render-markdown.nvim",
+  --  dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-mini/mini.nvim" },
+  --  ft = { "markdown" },
+  --  render_modes = true,
+  --},
+  {
+    "OXY2DEV/markview.nvim",
+    lazy = false,
+  },
   {
     "nvim-tree/nvim-tree.lua",
     opts = {
