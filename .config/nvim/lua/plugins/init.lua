@@ -17,12 +17,6 @@ return {
       dofile(vim.g.base46_cache .. "rainbowdelimiters")
     end,
   },
-  --{
-  --  "MeanderingProgrammer/render-markdown.nvim",
-  --  dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-mini/mini.nvim" },
-  --  ft = { "markdown" },
-  --  render_modes = true,
-  --},
   {
     "OXY2DEV/markview.nvim",
     lazy = false,
@@ -46,16 +40,17 @@ return {
     opts = {
       ensure_installed = {
         "bash-language-server",
+        "clang-format",
         "gdtoolkit",
         "jq",
         "lua-language-server",
         "markdown-oxide",
-        "mdformat",
-        "shellharden",
-        "shfmt",
+        "rumdl",
         "stylua",
+        "typos",
+        "typos-lsp",
         "yaml-language-server",
-        "yamlfmt",
+        "yamllint",
         "yq",
       },
     },
@@ -70,6 +65,7 @@ return {
         "gitignore",
         "godot_resource",
         "json",
+        "just",
         "lua",
         "luadoc",
         "tmux",

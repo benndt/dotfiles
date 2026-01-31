@@ -6,6 +6,7 @@ local servers = {
   "gdshader_lsp",
   "lua_ls",
   "markdown_oxide",
+  "typos-lsp",
   "yamlls",
 }
 

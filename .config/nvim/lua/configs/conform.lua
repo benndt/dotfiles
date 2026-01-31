@@ -2,12 +2,10 @@ local options = {
   formatters_by_ft = {
     gd = { "gdformat" },
     gdscript = { "gdformat" },
+    gdshader = { "clang-format" },
     json = { "jq" },
     lua = { "stylua" },
-    markdown = { "mdformat" },
-    sh = { "shfmt", "shellharden" },
-    yaml = { "yamlfmt" },
-    zsh = { "shellharden" },
+    markdown = { "rumdl" },
   },
 
   format_on_save = {
