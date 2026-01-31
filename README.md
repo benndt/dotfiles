@@ -52,6 +52,8 @@ If you don't use `aseprite` and `godot` you can also remove more configs.
 - [catppuccin/godot](https://github.com/catppuccin/godot)
 - [gdtoolkit](https://github.com/Scony/godot-gdscript-toolkit)
 
+### [just](https://github.com/casey/just)
+
 ### [nvim](https://github.com/neovim/neovim) / [nvchad](https://nvchad.com/)
 
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
@@ -61,7 +63,6 @@ If you don't use `aseprite` and `godot` you can also remove more configs.
 - [catppuccin/zsh-syntax-highlighting](https://github.com/catppuccin/zsh-syntax-highlighting)
 - [fzf-tab](https://github.com/Aloxaf/fzf-tab)
 - [fzf](https://github.com/junegunn/fzf)
-- [thefuck](https://github.com/nvbn/thefuck)
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 - [zsh-completions](https://github.com/zsh-users/zsh-completions)

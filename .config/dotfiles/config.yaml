@@ -9,12 +9,12 @@ packages:
     - tmux
 
   pip:
-    - thefuck
     - tmuxp
     - lefthook
     - gdtoolkit==4.*
 
   snap:
+    - just
     - nvim
     - btop
     - yq
