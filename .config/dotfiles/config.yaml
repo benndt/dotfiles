@@ -2,20 +2,22 @@ symlink_command: stow . --target="$HOME" --no-folding
 
 packages:
   pacman:
-    - btop
     - bat
+    - bc
+    - btop
     - fd
-    - git-delta
+    - fzf
     - git
+    - git-delta
     - go-yq
     - just
     - lefthook
     - neovim
+    - python-pipx
     - ripgrep
     - stow
     - tmux
     - tmuxp
-    - fzf
     - zoxide
 
   pipx:
