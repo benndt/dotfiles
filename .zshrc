@@ -78,4 +78,4 @@ autoload -Uz compinit && compinit
 eval "$(zoxide init --cmd cd zsh)"
 
 # fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
