@@ -3,54 +3,13 @@
 source "$DOTFILES_CONFIG/helper.sh"
 
 _update_apt_packages() {
-  _print_info "Update apt package list"
-  sudo apt -qq update
-
-  _print_info "Update apt packages"
-  sudo apt -qq upgrade -y
-  sudo apt -qq dist-upgrade -y
-
-  _print_info "Remove unused and unavailable apt packages"
-  sudo apt -qq clean
-  sudo apt -qq autoremove -f
+  _print_info "Update all pacman packages"
+  sudo pacman -Syu
 }
 
-_update_pip_packages() {
-  _print_info "Update pip packages"
-
-  _config_value ".packages.pip[]" | while read -r package; do
-    pip install --user --upgrade "$(echo "$package" | yq)"
-  done
-}
-
-_update_snap_packages() {
-  _print_info "Update snap packages"
-  sudo snap refresh
-}
-
-_update_deb_packages() {
-  local name command file latest_version current_version url
-
-  _config_value ".packages.deb[]" | while read -r dependency; do
-    name=$(echo "$dependency" | yq ".name")
-    command=$(echo "$dependency" | yq ".command")
-    file=$(echo "$dependency" | yq ".file")
-
-    _print_info "Update $name"
-    latest_version=$(_get_latest_version "$name" "release")
-    current_version=$(_get_current_version "$name" "$command")
-
-    if [ "$current_version" = "$latest_version" ]; then
-      echo "Already up to date."
-      continue
-    fi
-
-    url=$(echo "https://github.com/$name/releases/latest/download/$file" | sed "s/<version>/$latest_version/g")
-
-    curl -LO "$url"
-    sudo dpkg -i "$(basename "$url")"
-    rm "$(basename "$url")"
-  done
+_update_pipx_packages() {
+  _print_info "Update pipx packages"
+  pipx upgrade-all
 }
 
 _update_self_managed() {
@@ -121,11 +80,9 @@ _print_manual_downloads() {
 }
 
 update-all() {
-  _update_apt_packages
-  _update_pip_packages
-  _update_snap_packages
+  _update_pacman_packages
+  _update_pipx_packages
   _update_self_managed
-  _update_deb_packages
   _update_git_repositories
   _update_git_file_downloads
 

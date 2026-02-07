@@ -20,8 +20,4 @@ vim.lsp.config("lua_ls", {
   },
 })
 
-vim.lsp.config("gdscript", {
-  cmd = { "godot-wsl-lsp", "--useMirroredNetworking", "--host", "localhost" },
-})
-
 vim.lsp.enable(servers)
