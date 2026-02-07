@@ -1,34 +1,25 @@
 symlink_command: stow . --target="$HOME" --no-folding
 
 packages:
-  apt:
-    - fd-find
+  pacman:
+    - btop
+    - bat
+    - fd
+    - git-delta
     - git
+    - go-yq
+    - just
+    - lefthook
+    - neovim
     - ripgrep
     - stow
     - tmux
-
-  pip:
     - tmuxp
-    - lefthook
+    - fzf
+    - zoxide
+
+  pipx:
     - gdtoolkit==4.*
-
-  snap:
-    - just
-    - nvim
-    - btop
-    - yq
-
-  deb:
-    - name: sharkdp/bat
-      command: bat
-      file: 'bat_<version>_amd64.deb'
-    - name: dandavison/delta
-      command: delta
-      file: 'git-delta_<version>_amd64.deb'
-    - name: BurntSushi/ripgrep
-      command: rg
-      file: 'ripgrep_<version>-1_amd64.deb'
 
   manual_downloads:
     - name: Godot
@@ -41,8 +32,6 @@ packages:
       link: https://github.com/catppuccin/aseprite
     - name: catppuccin/godot
       link: https://github.com/catppuccin/godot
-    - name: catppuccin/windows-terminal
-      link: https://github.com/catppuccin/windows-terminal
 
   self_managed:
     - name: tpm
@@ -55,11 +44,6 @@ packages:
       update_cmd: "local result=$(omz update) && echo $result"
 
   git_repositories:
-    - name: fzf
-      path: ~/.fzf
-      custom_clone: git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-      post_cmd: |
-        ~/.fzf/install --key-bindings --completion --no-update-rc
     - name: fzf-tab
       path: |
         "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}"/plugins/fzf-tab
@@ -78,9 +62,6 @@ packages:
       url: https://github.com/zsh-users/zsh-autosuggestions
 
   git_file_downloads:
-    - name: ajeetdsouza/zoxide
-      type: release
-      cmd: curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/v"$latest_version"/install.sh | sh
     - name: catppuccin/zsh-syntax-highlighting
       type: commit
       cmd: |
