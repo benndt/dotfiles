@@ -1,15 +1,15 @@
 # envs
-export ASEPRITE_BIN="/mnt/c/Programme/Aseprite/Aseprite.exe"
-export DEV="/mnt/c/Users/Benn/Documents/Dev"
+export ASEPRITE_BIN="aseprite"
+export DEV="$HOME/dev"
 export DOTFILES_CONFIG="$HOME/.config/dotfiles"
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
-export GODOT_BIN="/mnt/c/Godot_v4.6/Godot_v4.6-stable_win64.exe"
+export GODOT_BIN="godot"
 export HISTTIMEFORMAT="%d/%m/%y %T "
 export JUST_COMMAND_COLOR='green'
-export PATH=~/.bun/bin:/snap/bin:$HOME/.local/bin:$PATH
+export PATH=~/.local/bin:$PATH
 export XDG_CONFIG_HOME="$HOME/.config"
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CUSTOM="$HOME/.config/oh-my-zsh"
@@ -38,24 +38,23 @@ source "$ZSH"/oh-my-zsh.sh
 bindkey -e
 
 # completion styling
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
-zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 zstyle ':completion:*:git-checkout:*' sort false
+zstyle ':fzf-tab:*' fzf-flags --color=fg:1,fg+:2 --bind=tab:accept
+zstyle ':fzf-tab:*' use-fzf-default-opts yes
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':omz:plugins:alias-finder' autoload yes
-zstyle ':omz:plugins:alias-finder' exact yes
 zstyle ':omz:plugins:alias-finder' cheaper yes
+zstyle ':omz:plugins:alias-finder' exact yes
 zstyle ':omz:update' verbose minimal
 
 # aliases
-alias aseprite="open '' '%ProgramFiles%\Aseprite\Aseprite.exe'"
 alias c="clear"
 alias dev="cd $DEV"
-alias godot="open '' '%HOMEDRIVE%\Godot_v4.6\Godot_v4.6-stable_win64.exe' --editor"
 alias open-template="DISABLE_AUTO_TITLE='true' tmuxp load -y"
-alias open="cmd.exe /c start"
 alias p="open-project"
 alias tks="tmux kill-server"
 
@@ -79,4 +78,4 @@ autoload -Uz compinit && compinit
 eval "$(zoxide init --cmd cd zsh)"
 
 # fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
