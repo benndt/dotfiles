@@ -1,7 +1,7 @@
 # Dotfiles
 
 > [!NOTE]
-> If you want to copy it, the following files should be adjusted:
+> The dotfiles are heavily customized to my needs and can either be copied and modified or used as inspiration.
 
 ## Usage
 
@@ -17,6 +17,11 @@ stow . --target="$HOME" --no-folding
 ## Requirements
 
 - All [catppuccin](https://github.com/catppuccin/catppuccin) dependencies should be downloaded with theme `mocha`.
+
+### alacritty
+
+- [catppuccin/alacritty](https://github.com/catppuccin/alacritty)
+- [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads)
 
 ### [aseprite](https://www.aseprite.org/)
 
@@ -60,7 +65,3 @@ stow . --target="$HOME" --no-folding
 
 - [tmuxp](https://github.com/tmux-python/tmuxp)
 - [tpm](https://github.com/tmux-plugins/tpm)
-
-### terminal
-
- [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads)
