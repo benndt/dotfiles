@@ -2,6 +2,7 @@ symlink_command: stow . --target="$HOME" --no-folding
 
 packages:
   pacman:
+    - alacritty
     - bat
     - bc
     - btop
