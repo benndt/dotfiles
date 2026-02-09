@@ -2,7 +2,7 @@
 
 source "$DOTFILES_CONFIG/helper.sh"
 
-_update_apt_packages() {
+_update_pacman_packages() {
   _print_info "Update all pacman packages"
   sudo pacman -Syu
 }

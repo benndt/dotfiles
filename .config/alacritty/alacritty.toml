@@ -17,7 +17,8 @@ bindings = [
 [keyboard]
 bindings = [
   { key = "PageUp", action = "ScrollPageUp" },
-  { key = "PageDown", action = "ScrollPageDown" }
+  { key = "PageDown", action = "ScrollPageDown" },
+  { key = "T", mods = "Control | Shift", action = "CreateNewWindow" }
 ]
 
 [selection]
