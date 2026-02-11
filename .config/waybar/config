@@ -1,0 +1,83 @@
+{
+    "layer": "top",
+    "position": "top",
+    "reload_style_on_change": true,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["mpris"],
+    "modules-right": ["tray", "cpu", "memory", "pulseaudio", "clock"],
+    "hyprland/workspaces": {
+         "on-click": "activate",
+         "disable-scroll": true,
+         "sort-by-name": true,
+         "format": " {icon} ",
+         "format-icons": {
+             "1": "",
+             "3": "󰈹",
+             "2": "󰊴",
+         },
+         "persistent-workspaces": {
+           "DP-1": [1, 2],
+           "DP-2": [3]
+         }
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+    "cpu": {
+        "format": "  {usage}%",
+        "on-click": "alacritty --command btop",
+    },
+    "memory": {
+        "format": "  {:2}%",
+        "on-click": "alacritty --command btop",
+    },
+    "mpris": {
+        "format": "{player_icon} | {status_icon} {dynamic}",
+        "interval": 1,
+        "dynamic-len": 40,
+        "player-icons": {
+            "default": "",
+            "firefox": "󰈹",
+            "spotify": "",
+        },
+        "status-icons": {
+            "playing": "▶",
+            "paused": "⏸",
+            "stopped": ""
+        },
+    },
+    "clock": {
+        "tooltip-format": "{calendar}",
+        "format": "{:%d.%h %H:%M}",
+        "timezone": "Europe/Berlin",
+        "actions": {
+            "on-click-right": "mode",
+        },
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "weeks-pos": "left",
+            "on-scroll": 1,
+            "format": {
+                "today": "<span color='#cba6f7'><b>{}</b></span>",
+                "months": "<span color='#cba6f7'><b>{}</b></span>",
+                "days": "<span color='#cdd6f4'>{}</span>",
+                "weeks": "<span color='#a6e3a1'><b>KW{}</b></span>",
+                "weekdays": "<span color='#f9e2af'><b>{}</b></span>"
+            }
+        }
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-icons": {
+            "alsa_output.usb-SteelSeries_Arctis_Nova_7-00.analog-stereo": "",
+            "alsa_output.usb-SteelSeries_Arctis_Nova_7-00.analog-stereo-muted": "󰟎",
+            "alsa_output.pci-0000_00_1f.3.analog-stereo": "󰓃",
+            "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "󰓄",
+        },
+        "on-click-middle": "pavucontrol",
+        "on-click": "pactl set-default-sink alsa_output.usb-SteelSeries_Arctis_Nova_7-00.analog-stereo",
+        "on-click-right": "pactl set-default-sink alsa_output.pci-0000_00_1f.3.analog-stereo"
+    }
+}
