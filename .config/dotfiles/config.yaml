@@ -3,23 +3,39 @@ symlink_command: stow . --target="$HOME" --no-folding
 packages:
   pacman:
     - alacritty
+    - archlinux-xdg-menu
     - bat
     - bc
     - btop
+    - dunst
+    - egl-wayland
     - fd
     - fzf
     - git
     - git-delta
     - go-yq
+    - hypridle
+    - hyprland
+    - hyprlock
+    - hyprpaper
     - just
-    - lefthook
     - neovim
     - python-pipx
     - ripgrep
+    - rofi
     - stow
     - tmux
     - tmuxp
+    - waybar
+    - xcur2png
+    - xdg-desktop-portal-hyprland
     - zoxide
+    - flameshot
+    - grim
+    - slurp
+
+  yay:
+    - lefthook
 
   pipx:
     - gdtoolkit==4.*

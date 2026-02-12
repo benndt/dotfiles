@@ -1,7 +1,16 @@
 [global]
+font = JetBrainsMono Nerd Font 12
 frame_color = "#89b4fa"
+frame_width = 2
+follow = mouse
 separator_color= frame
 highlight = "#89b4fa"
+corner_radius = 8
+offset = (16, 16)
+padding = 12
+horizontal_padding = 16
+show_age_threshold = 60
+show_indicators = yes
 
 [urgency_low]
 background = "#1e1e2e"
