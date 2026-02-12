@@ -44,6 +44,9 @@
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   border-radius: 12px;
+  /*border-bottom-width: 5px;
+  border-bottom-color: @surface1;
+  border-bottom-style: solid;*/
 }
 
 #clock,
@@ -58,16 +61,20 @@
 
 #memory {
   color: @green;
+  /*border-bottom-color: @green;*/
 }
 
 #cpu {
   color: @yellow;
+  /*border-bottom-color: @yellow;*/
 }
 
 #pulseaudio {
   color: @maroon;
+  /*border-bottom-color: @maroon;*/
 }
 
 #clock {
   color: @blue;
+  /*border-bottom-color: @blue;*/
 }
