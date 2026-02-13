@@ -125,7 +125,7 @@ packages:
     - name: catppuccin/hyprland
       type: commit
       cmd: |
-        rm -f "$HOME/.config/hypr/themes/mocha.css" &&
+        rm -f "$HOME/.config/hypr/themes/mocha.conf" &&
         wget --no-verbose -P "$HOME/.config/hypr/themes" https://github.com/catppuccin/hyprland/raw/main/themes/mocha.conf
     - name: catppuccin/fzf
       type: commit
