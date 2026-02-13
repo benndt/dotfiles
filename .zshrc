@@ -1,11 +1,7 @@
 # envs
 export ASEPRITE_BIN="aseprite"
 export DEV="$HOME/dev"
-export DOTFILES_CONFIG="$HOME/.config/dotfiles"
-export FZF_DEFAULT_OPTS=" \
---color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
---color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
---color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+export DOTFILES_CONFIG="$DEV/dotfiles"
 export GODOT_BIN="godot"
 export HISTTIMEFORMAT="%d/%m/%y %T "
 export JUST_COMMAND_COLOR='green'
@@ -59,11 +55,10 @@ alias p="open-project"
 alias tks="tmux kill-server"
 
 # commands
-find "$ZSH_CUSTOM"/commands/*.sh | while read -r script; do
-  if [[ -f "$script" ]]; then
-    source "$script"
-  fi
-done
+source "$ZSH_CUSTOM/commands/open-git.sh"
+source "$ZSH_CUSTOM/commands/open-project.sh"
+source "$ZSH_CUSTOM/commands/projects.sh"
+source "$ZSH_CUSTOM/commands/update-dependencies.sh"
 
 # catppuccin_mocha-zsh-syntax-highlighting
 source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
@@ -78,4 +73,5 @@ autoload -Uz compinit && compinit
 eval "$(zoxide init --cmd cd zsh)"
 
 # fzf
+source ~/.config/fzf/catppuccin-fzf-mocha.sh
 source <(fzf --zsh)
