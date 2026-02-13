@@ -1,7 +1,7 @@
 @theme "catppuccin-default"
 
 configuration {
-  modes: "window,drun,run,ssh";
+  modes: "window,drun";
   font: "JetBrainsMono Nerd Font SemiBold 14";
   show-icons: true;
 
