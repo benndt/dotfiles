@@ -2,7 +2,7 @@
 
 DOTFILES_CONFIG="$PWD"
 
-source "$DOTFILES_CONFIG/.config/dotfiles/helper.sh"
+source "$DOTFILES_CONFIG/.config/oh-my-zsh/scripts/helper.sh"
 source "$DOTFILES_CONFIG/.config/oh-my-zsh/commands/update-dependencies.sh"
 
 _create_installed_file() {
