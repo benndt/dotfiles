@@ -1,10 +1,15 @@
 #!/usr/bin/env bash
 
-source "$DOTFILES_CONFIG/helper.sh"
+source "$DOTFILES_CONFIG/.config/dotfiles/helper.sh"
 
 _update_pacman_packages() {
   _print_info "Update all pacman packages"
   sudo pacman -Syu
+}
+
+_update_yay_packages() {
+  _print_info "Update yay packages"
+  yay -Syu
 }
 
 _update_pipx_packages() {
@@ -69,7 +74,7 @@ _update_git_repositories() {
 
 _print_manual_downloads() {
   local name link
-  _print_info "Manual Updates"
+  _print_info "Manual Downloads"
 
   _config_value ".packages.manual_downloads[]" | while read -r dependency; do
     name=$(echo "$dependency" | yq ".name")
@@ -79,8 +84,9 @@ _print_manual_downloads() {
   done
 }
 
-update-all() {
+update-dependencies() {
   _update_pacman_packages
+  _update_yay_packages
   _update_pipx_packages
   _update_self_managed
   _update_git_repositories

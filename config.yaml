@@ -10,10 +10,12 @@ packages:
     - dunst
     - egl-wayland
     - fd
+    - flameshot
     - fzf
     - git
     - git-delta
     - go-yq
+    - grim
     - hypridle
     - hyprland
     - hyprlock
@@ -23,6 +25,7 @@ packages:
     - python-pipx
     - ripgrep
     - rofi
+    - slurp
     - stow
     - tmux
     - tmuxp
@@ -30,27 +33,30 @@ packages:
     - xcur2png
     - xdg-desktop-portal-hyprland
     - zoxide
-    - flameshot
-    - grim
-    - slurp
 
   yay:
     - lefthook
 
   pipx:
-    - gdtoolkit==4.*
+    - gdtoolkit
 
   manual_downloads:
-    - name: Godot
-      link: https://godotengine.org/
-    - name: JetBrainsMono Nerd Font
-      link: https://www.nerdfonts.com/font-downloads
     - name: Aseprite
       link: https://www.aseprite.org/
     - name: catppuccin/aseprite
       link: https://github.com/catppuccin/aseprite
     - name: catppuccin/godot
       link: https://github.com/catppuccin/godot
+    - name: catppuccin/obsidian
+      link: https://github.com/catppuccin/obsidian
+    - name: catppuccin/kde
+      link: https://github.com/catppuccin/kde
+    - name: catppuccin/cursors
+      link: https://github.com/catppuccin/cursors
+    - name: Godot
+      link: https://godotengine.org/
+    - name: JetBrainsMono Nerd Font
+      link: https://www.nerdfonts.com/font-downloads
 
   self_managed:
     - name: tpm
