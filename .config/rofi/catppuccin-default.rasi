@@ -15,12 +15,12 @@
   spacing:                     2;
   alternate-normal-foreground: @foreground;
   urgent-background:           @background;
-  selected-normal-foreground:  @lightbg;
+  selected-normal-foreground:  @text;
   active-foreground:           @blue;
   background:                  @base;
   selected-active-background:  @blue;
   active-background:           @background;
-  selected-normal-background:  @lightfg;
+  selected-normal-background:  @surface1;
   alternate-normal-background: @lightbg;
   foreground:                  @text;
   selected-urgent-foreground:  @background;
@@ -86,38 +86,40 @@ element-icon {
 window {
     padding:          5;
     background-color: @background;
-    border:           1;
+    border:           2px;
+    border-color: @surface0;
+    border-radius: 8px;
 }
 mainbox {
     padding: 0;
     border:  0;
 }
 message {
+    border-color: @surface0;
     padding:      1px ;
-    border-color: @separatorcolor;
-    border:       2px dash 0px 0px ;
+    border:       2px solid 0px 0px ;
 }
 textbox {
     text-color: @foreground;
 }
 listview {
+    border-color: @surface0;
     padding:      2px 0px 0px ;
     scrollbar:    true;
-    border-color: @separatorcolor;
     spacing:      2px ;
     fixed-height: 0;
-    border:       2px dash 0px 0px ;
+    border:       2px solid 0px 0px ;
 }
 scrollbar {
     width:        4px ;
     padding:      0;
     handle-width: 8px ;
     border:       0;
-    handle-color: @normal-foreground;
+    handle-color: @surface1;
 }
 sidebar {
     border-color: @separatorcolor;
-    border:       2px dash 0px 0px ;
+    border:       2px solid 0px 0px ;
 }
 button {
     cursor:     pointer;
@@ -147,10 +149,12 @@ inputbar {
     text-color: @normal-foreground;
     children:   [ "prompt","textbox-prompt-colon","entry","num-filtered-rows","textbox-num-sep","num-rows","case-indicator" ];
 }
+
 case-indicator {
     spacing:    0;
     text-color: @normal-foreground;
 }
+
 entry {
     text-color:        @normal-foreground;
     cursor:            text;
@@ -158,13 +162,11 @@ entry {
     placeholder-color: Gray;
     placeholder:       "Type to filter";
 }
+
 prompt {
-    spacing:    0;
-    text-color: @normal-foreground;
+    enabled: false;
 }
+
 textbox-prompt-colon {
-    margin:     0px 0.3000em 0.0000em 0.0000em ;
-    expand:     false;
-    str:        ":";
-    text-color: inherit;
+    enabled: false;
 }
