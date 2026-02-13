@@ -3,38 +3,60 @@ symlink_command: stow . --target="$HOME" --no-folding
 packages:
   pacman:
     - alacritty
+    - archlinux-xdg-menu
     - bat
     - bc
     - btop
+    - dunst
+    - egl-wayland
     - fd
+    - flameshot
     - fzf
     - git
     - git-delta
     - go-yq
+    - grim
+    - hypridle
+    - hyprland
+    - hyprlock
+    - hyprpaper
     - just
-    - lefthook
     - neovim
     - python-pipx
     - ripgrep
+    - rofi
+    - slurp
     - stow
     - tmux
     - tmuxp
+    - waybar
+    - xcur2png
+    - xdg-desktop-portal-hyprland
     - zoxide
 
+  yay:
+    - lefthook
+
   pipx:
-    - gdtoolkit==4.*
+    - gdtoolkit
 
   manual_downloads:
-    - name: Godot
-      link: https://godotengine.org/
-    - name: JetBrainsMono Nerd Font
-      link: https://www.nerdfonts.com/font-downloads
     - name: Aseprite
       link: https://www.aseprite.org/
     - name: catppuccin/aseprite
       link: https://github.com/catppuccin/aseprite
     - name: catppuccin/godot
       link: https://github.com/catppuccin/godot
+    - name: catppuccin/obsidian
+      link: https://github.com/catppuccin/obsidian
+    - name: catppuccin/kde
+      link: https://github.com/catppuccin/kde
+    - name: catppuccin/cursors
+      link: https://github.com/catppuccin/cursors
+    - name: Godot
+      link: https://godotengine.org/
+    - name: JetBrainsMono Nerd Font
+      link: https://www.nerdfonts.com/font-downloads
 
   self_managed:
     - name: tpm
@@ -68,20 +90,45 @@ packages:
     - name: catppuccin/zsh-syntax-highlighting
       type: commit
       cmd: |
-        rm "$HOME/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh" &&
+        rm -f "$HOME/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh" &&
         wget --no-verbose -P "$HOME/.zsh/" https://github.com/catppuccin/zsh-syntax-highlighting/raw/main/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
     - name: catppuccin/bat
       type: commit
       cmd: |
-        rm "$(bat --config-dir)/themes/Catppuccin Mocha.tmTheme" &&
+        rm -f "$(bat --config-dir)/themes/Catppuccin Mocha.tmTheme" &&
         wget --no-verbose -P "$(bat --config-dir)/themes" https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Mocha.tmTheme &&
         bat cache --build
     - name: catppuccin/delta
       type: commit
       cmd: |
-        rm "$HOME/.config/delta/themes/catppuccin.gitconfig" &&
+        rm -f "$HOME/.config/delta/themes/catppuccin.gitconfig" &&
         wget --no-verbose -P "$HOME/.config/delta/themes" https://github.com/catppuccin/delta/raw/main/catppuccin.gitconfig
     - name: catppuccin/btop
       type: release
       cmd: |
         wget --no-verbose -qO- https://github.com/catppuccin/btop/releases/download/"$latest_version"/themes.tar.gz | tar -xzv -C "$XDG_CONFIG_HOME/btop/themes" --strip-components=1
+    - name: catppuccin/alacritty
+      type: commit
+      cmd: |
+        rm -f "$HOME/.config/alacritty/catppuccin-mocha.toml" &&
+        wget --no-verbose -P "$HOME/.config/alacritty" https://github.com/catppuccin/alacritty/raw/main/catppuccin-mocha.toml
+    - name: catppuccin/rofi
+      type: commit
+      cmd: |
+        rm -f "$HOME/.config/rofi/catppuccin-mocha.rasi" &&
+        wget --no-verbose -P "$HOME/.config/rofi" https://github.com/catppuccin/rofi/raw/main/themes/catppuccin-mocha.rasi
+    - name: catppuccin/waybar
+      type: commit
+      cmd: |
+        rm -f "$HOME/.config/waybar/mocha.css" &&
+        wget --no-verbose -P "$HOME/.config/waybar" https://github.com/catppuccin/waybar/raw/main/themes/mocha.css
+    - name: catppuccin/hyprland
+      type: commit
+      cmd: |
+        rm -f "$HOME/.config/hypr/themes/mocha.conf" &&
+        wget --no-verbose -P "$HOME/.config/hypr/themes" https://github.com/catppuccin/hyprland/raw/main/themes/mocha.conf
+    - name: catppuccin/fzf
+      type: commit
+      cmd: |
+        rm -f "$HOME/.config/fzf/catppuccin-fzf-mocha.sh" &&
+        wget --no-verbose -P "$HOME/.config/fzf" https://github.com/catppuccin/fzf/raw/main/themes/catppuccin-fzf-mocha.sh

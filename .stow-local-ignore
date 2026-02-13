@@ -1,3 +1,7 @@
 .gitignore
 .git
 README.md
+
+.installed.yaml
+config.yaml
+install.sh

@@ -1,7 +1,7 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
-readonly PACKAGE_VERSION_FILE="$DOTFILES_CONFIG/packages.yaml"
-readonly CONFIG_FILE="$DOTFILES_CONFIG/config.yaml"
+PACKAGE_VERSION_FILE="$DOTFILES_CONFIG/.installed.yaml"
+CONFIG_FILE="$DOTFILES_CONFIG/config.yaml"
 
 _print_info() {
   local text=$1
@@ -24,6 +24,10 @@ _print_link() {
 
 _config_value() {
   yq -o=j -I=0 "$1" "$CONFIG_FILE"
+}
+
+_config_list() {
+  yq "$1" "$CONFIG_FILE"
 }
 
 _get_latest_version() {

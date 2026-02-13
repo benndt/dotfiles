@@ -1,0 +1,30 @@
+[global]
+corner_radius = 8
+follow = mouse
+font = JetBrainsMono Nerd Font 12
+frame_color = "#b4befe"
+frame_width = 2
+gap_size = 8
+highlight = "#b4befe"
+horizontal_padding = 16
+offset = (16, 16)
+padding = 12
+separator_color= frame
+show_age_threshold = 60
+show_indicators = yes
+
+[urgency_low]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+timeout = 8
+
+[urgency_normal]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+timeout = 16
+
+[urgency_critical]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+frame_color = "#f38ba8"
+timeout = 60
