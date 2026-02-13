@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source "$DOTFILES_CONFIG/.config/dotfiles/helper.sh"
+source "$DOTFILES_CONFIG/.config/oh-my-zsh/scripts/helper.sh"
 
 _update_pacman_packages() {
   _print_info "Update all pacman packages"
