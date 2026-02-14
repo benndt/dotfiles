@@ -1,0 +1,10 @@
+[Unit]
+Description=Dynamic wallpaper
+
+[Service]
+Type=oneshot
+ExecStart=/home/%u/.local/bin/wallpaper.sh
+
+[Install]
+WantedBy=default.target
+
