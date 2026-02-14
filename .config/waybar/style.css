@@ -7,9 +7,10 @@
 }
 
 #waybar {
-  background: transparent;
+  /*background: transparent;*/
   margin: 4px 4px;
   color: @text;
+  background: rgba(17, 17, 27, 0.7);
 }
 
 #workspaces button {
@@ -39,7 +40,7 @@
 #memory,
 #pulseaudio {
   background-color: @surface0;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
   margin-top: 0.5rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;

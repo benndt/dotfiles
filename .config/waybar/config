@@ -36,6 +36,7 @@
         "format": "{player_icon} | {status_icon} {dynamic}",
         "interval": 1,
         "dynamic-len": 40,
+        "dynamic-order": ["title", "artist", "position"],
         "player-icons": {
             "default": "",
             "firefox": "󰈹",
