@@ -7,10 +7,10 @@
 }
 
 #waybar {
-  /*background: transparent;*/
+  background: transparent;
   margin: 4px 4px;
   color: @text;
-  background: rgba(17, 17, 27, 0.7);
+  /*background: rgba(30, 30, 30, 0.4);*/
 }
 
 #workspaces button {
@@ -40,13 +40,17 @@
 #memory,
 #pulseaudio {
   background-color: @surface0;
+  /*background-color: rgba(49, 50, 68, 0.4);*/
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   border-radius: 12px;
-  /*border-bottom-width: 5px;
+  /*border-bottom-width: 3px;
   border-bottom-color: @surface1;
+  border-bottom-style: solid;*/
+  /*border-bottom-width: 3px;
+  border-bottom-color: rgba(69, 71, 90, 0.4);
   border-bottom-style: solid;*/
 }
 
