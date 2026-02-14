@@ -9,8 +9,12 @@ _create_installed_file() {
   touch $DOTFILES_CONFIG/.installed.yaml
 }
 
+_create_symlinks() {
+  _print_info "Create symlinks to dotfiles"
+  eval $(_config_list ".symlink_command")
+}
+
 _install_pacman_packages() {
-  echo "${DOTFILES_CONFIG}"
   _print_info "Install pacman packages"
   sudo pacman -S $(_config_list ".packages.pacman[]")
 }
@@ -26,6 +30,7 @@ _install_pipx_packages() {
 }
 
 _build_system_cache() {
+  _print_info "Build system cache"
   XDG_MENU_PREFIX=arch- kbuildsycoca6
 }
 
@@ -45,6 +50,7 @@ _install_pacman_packages
 _install_yay_packages
 _install_pipx_packages
 _install_self_managed
+
 _update_git_repositories
 _update_git_file_downloads
 
@@ -52,3 +58,4 @@ _build_system_cache
 
 _print_manual_downloads
 
+_create_symlinks

@@ -71,19 +71,19 @@ packages:
   git_repositories:
     - name: fzf-tab
       path: |
-        "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}"/plugins/fzf-tab
+        "${ZSH_CUSTOM:-~/.config/oh-my-zsh}"/plugins/fzf-tab
       url: https://github.com/Aloxaf/fzf-tab
     - name: zsh-completions
       path: |
-        "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}"/plugins/zsh-completions
+        "${ZSH_CUSTOM:-~/.config/oh-my-zsh}"/plugins/zsh-completions
       url: https://github.com/zsh-users/zsh-completions
     - name: zsh-syntax-highlighting
       path: |
-        "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}"/plugins/zsh-syntax-highlighting
+        "${ZSH_CUSTOM:-~/.config/oh-my-zsh}"/plugins/zsh-syntax-highlighting
       url: https://github.com/zsh-users/zsh-syntax-highlighting.git
     - name: zsh-autosuggestions
       path: |
-        "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}"/plugins/zsh-autosuggestions
+        "${ZSH_CUSTOM:-~/.config/oh-my-zsh}"/plugins/zsh-autosuggestions
       url: https://github.com/zsh-users/zsh-autosuggestions
 
   git_file_downloads:
@@ -104,9 +104,10 @@ packages:
         rm -f "$HOME/.config/delta/themes/catppuccin.gitconfig" &&
         wget --no-verbose -P "$HOME/.config/delta/themes" https://github.com/catppuccin/delta/raw/main/catppuccin.gitconfig
     - name: catppuccin/btop
-      type: release
+      type: commit
       cmd: |
-        wget --no-verbose -qO- https://github.com/catppuccin/btop/releases/download/"$latest_version"/themes.tar.gz | tar -xzv -C "$XDG_CONFIG_HOME/btop/themes" --strip-components=1
+        rm -f "$HOME/.config/btop/themes/catppuccin_mocha.theme" &&
+        wget --no-verbose -P "$HOME/.config/btop/themes" https://github.com/catppuccin/btop/raw/main/themes/catppuccin_mocha.theme
     - name: catppuccin/alacritty
       type: commit
       cmd: |
