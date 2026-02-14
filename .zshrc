@@ -60,7 +60,7 @@ source "$ZSH_CUSTOM/commands/update-dependencies.sh"
 source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 
 # just
-source ~/.zsh/just.zsh
+source <(just --completions=zsh)
 
 # Load completions
 autoload -Uz compinit && compinit

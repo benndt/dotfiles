@@ -3,23 +3,24 @@
 PACKAGE_VERSION_FILE="$DOTFILES_CONFIG/.installed.yaml"
 CONFIG_FILE="$DOTFILES_CONFIG/config.yaml"
 
+RESET_COLOR='\033[0m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+LINK_START='\e]8;;'
+LINK_END='\e]8;;\e\\'
+LINK_NAME='\e\\'
+
 _print_info() {
   local text=$1
 
-  print "\n${fg_bold[cyan]}${text}${reset_color}"
+  echo -e "${CYAN}${text}${RESET_COLOR}"
 }
 
 _print_link() {
   local text=$1
   local link=$2
 
-  local link_start link_end link_description
-
-  link_start='\e]8;;'
-  link_end='\e]8;;\e\\'
-  link_description='\e\\'
-
-  print "${fg[magenta]}${link_start}${link}${link_description}${text}${link_end}${reset_color}"
+  echo -e "${PURPLE}${LINK_START}${link}${LINK_NAME}${text}${LINK_END}${RESET_COLOR}"
 }
 
 _config_value() {
@@ -56,7 +57,7 @@ _get_current_version() {
     return
   fi
 
-  yq ".$name" <"$PACKAGE_VERSION_FILE"
+  yq ".$name" < "$PACKAGE_VERSION_FILE"
 }
 
 _update_current_version() {
