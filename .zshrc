@@ -20,7 +20,9 @@ plugins=(
     command-not-found
     fzf-tab
     git
+    gitweb
     tmux
+    tmuxp
     zsh-autosuggestions
     zsh-syntax-highlighting
 )
@@ -50,14 +52,8 @@ zstyle ':omz:update' verbose minimal
 # aliases
 alias c="clear"
 alias dev="cd $DEV"
-alias open-template="DISABLE_AUTO_TITLE='true' tmuxp load -y"
-alias p="open-project"
-alias tks="tmux kill-server"
 
 # commands
-source "$ZSH_CUSTOM/commands/open-git.sh"
-source "$ZSH_CUSTOM/commands/open-project.sh"
-source "$ZSH_CUSTOM/commands/projects.sh"
 source "$ZSH_CUSTOM/commands/update-dependencies.sh"
 
 # catppuccin_mocha-zsh-syntax-highlighting

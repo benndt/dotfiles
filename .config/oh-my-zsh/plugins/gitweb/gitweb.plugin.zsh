@@ -1,6 +1,4 @@
-#!/usr/bin/env bash
-
-open-git() {
+gitweb() {
   local ssh_url host https_url
 
   ssh_url=$(git remote get-url --push origin)
@@ -11,3 +9,4 @@ open-git() {
 
   xdg-open "$https_url"
 }
+
