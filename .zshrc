@@ -2,6 +2,7 @@
 export ASEPRITE_BIN="aseprite"
 export DEV="$HOME/dev"
 export DOTFILES_CONFIG="$DEV/dotfiles"
+export EDITOR="nvim"
 export GODOT_BIN="godot"
 export HISTTIMEFORMAT="%d/%m/%y %T "
 export JUST_COMMAND_COLOR='green'
