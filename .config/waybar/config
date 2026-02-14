@@ -4,7 +4,40 @@
     "reload_style_on_change": true,
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["mpris"],
-    "modules-right": ["tray", "cpu", "memory", "pulseaudio", "clock"],
+    "modules-right": ["tray", "cpu", "memory", "pulseaudio", "clock", "group/power"],
+    "group/power": {
+        "orientation": "inherit",
+        "drawer": {
+            "children-class": "not-power",
+            "transition-left-to-right": false,
+        },
+        "modules": [
+            "custom/shutdown",
+            "custom/quit",
+            "custom/lock",
+            "custom/reboot",
+        ]
+    },
+    "custom/quit": {
+        "format": "  ",
+        "tooltip": false,
+        "on-click": "hyprctl dispatch exit"
+    },
+    "custom/lock": {
+        "format": "  ",
+        "tooltip": false,
+        "on-click": "hyprlock"
+    },
+    "custom/reboot": {
+        "format": "  ",
+        "tooltip": false,
+        "on-click": "reboot"
+    },
+    "custom/shutdown": {
+        "format": "  ",
+        "tooltip": false,
+        "on-click": "shutdown now"
+    },
     "hyprland/workspaces": {
          "on-click": "activate",
          "disable-scroll": true,

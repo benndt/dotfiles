@@ -9,28 +9,11 @@
 #waybar {
   background: transparent;
   margin: 4px 4px;
-  color: @text;
+  color: @lavender;
   /*background: rgba(30, 30, 30, 0.4);*/
 }
 
-#workspaces button {
-  border: none;
-  color: @surface2;
-}
-
-#workspaces button.active {
-  color: @text;
-}
-
-#workspaces button:hover {
-  transition: none; 
-  box-shadow: inherit;
-  text-shadow: inherit;
-  background: @surface0;
-  border-radius: 12px;
-  color: @yellow;
-}
-
+#power,
 #workspaces,
 #clock,
 #mpris,
@@ -54,6 +37,7 @@
   border-bottom-style: solid;*/
 }
 
+#power,
 #clock,
 #mpris,
 #cpu,
@@ -64,22 +48,32 @@
   padding: 0.25rem 1rem;
 }
 
-#memory {
-  color: @green;
-  /*border-bottom-color: @green;*/
+#workspaces button {
+  border: none;
+  color: @surface2;
 }
 
-#cpu {
+#workspaces button.active {
+  color: @text;
+}
+
+#workspaces button:hover {
+  transition: none; 
+  box-shadow: inherit;
+  text-shadow: inherit;
+  background: @surface0;
+  border-radius: 12px;
   color: @yellow;
-  /*border-bottom-color: @yellow;*/
 }
 
-#pulseaudio {
-  color: @maroon;
-  /*border-bottom-color: @maroon;*/
+#power {
+  color: @red;
+}
+
+.not-power {
+  color: @lavender;
 }
 
 #clock {
-  color: @blue;
-  /*border-bottom-color: @blue;*/
+  color: @mauve;
 }
