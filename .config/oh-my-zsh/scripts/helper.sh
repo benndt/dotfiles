@@ -13,7 +13,7 @@ LINK_NAME='\e\\'
 _print_info() {
   local text=$1
 
-  echo -e "${CYAN}${text}${RESET_COLOR}"
+  echo -e "\n${CYAN}${text}${RESET_COLOR}"
 }
 
 _print_link() {
