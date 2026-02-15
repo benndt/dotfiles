@@ -9,6 +9,11 @@ _create_installed_file() {
   touch $DOTFILES_CONFIG/.installed.yaml
 }
 
+_enable_services() {
+  systemctl enable --now --user ssh-agent.service
+  systemctl enable --now --user wallpaper.timer
+}
+
 _create_symlinks() {
   _print_info "Create symlinks to dotfiles"
   eval $(_config_list ".symlink_command")
@@ -59,3 +64,5 @@ _build_system_cache
 _print_manual_downloads
 
 _create_symlinks
+
+_enable_services
