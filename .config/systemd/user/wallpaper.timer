@@ -2,9 +2,10 @@
 Description=Run wallpaper.sh to change wallpaper by daytime
 
 [Timer]
-OnCalendar=06:00
+OnCalendar=07:00
 OnCalendar=16:00
 OnCalendar=20:00
+OnCalendar=23:00
 Persistent=true
 Unit=wallpaper.service
 
