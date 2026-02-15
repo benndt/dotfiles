@@ -7,6 +7,7 @@ export GODOT_BIN="godot"
 export HISTTIMEFORMAT="%d/%m/%y %T "
 export JUST_COMMAND_COLOR='green'
 export PATH=~/.local/bin:$PATH
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export XDG_CONFIG_HOME="$HOME/.config"
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CUSTOM="$HOME/.config/oh-my-zsh"
