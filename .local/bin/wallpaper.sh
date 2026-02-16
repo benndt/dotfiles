@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 _get_suffix() {
   randomNumber=$(shuf -i 1-100 -n 1)
 
@@ -33,7 +35,10 @@ _change_wallpaper() {
   _wait_for_hyprpaper
 
   daytime_wallpaper=$(_get_daytime_wallpaper)
-  
+
+  hour=$(date +%-H)
+  notify-send "Change wallpaper to lakeside-${daytime_wallpaper} | hour: ${hour}"
+
   hyprctl hyprpaper wallpaper ",~/images/wallpaper/lakeside-${daytime_wallpaper}.png"
 }
 
