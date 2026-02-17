@@ -36,9 +36,6 @@ _change_wallpaper() {
 
   daytime_wallpaper=$(_get_daytime_wallpaper)
 
-  hour=$(date +%-H)
-  notify-send "Change wallpaper to lakeside-${daytime_wallpaper} | hour: ${hour}"
-
   hyprctl hyprpaper wallpaper ",~/images/wallpaper/lakeside-${daytime_wallpaper}.png"
 }
 
