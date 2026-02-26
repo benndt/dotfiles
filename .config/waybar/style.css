@@ -8,33 +8,39 @@
 
 window#waybar {
   background: transparent;
-  /*background: rgba(30, 30, 46, 0.6);*/
   color: @lavender;
 }
 
 .modules-left {
   background: @base;
-  border-radius: 0px 0px 12px 0px;
+  border-radius: 0 0 1rem 0;
+  border-bottom: 1px solid @surface0;
+  border-right: 1px solid @surface0;
 }
 
 #mpris {
   background: @base;
-  border-radius: 0px 0px 12px 12px;
+  border-radius: 0 0 1rem 1rem;
+  border-bottom: 1px solid @surface0;
+  border-right: 1px solid @surface0;
+  border-left: 1px solid @surface0;
 }
 
 .modules-right {
   background: @base;
-  border-radius: 0px 0px 0px 12px;
+  border-radius: 0 0 0 1rem;
+  border-bottom: 1px solid @surface0;
+  border-left: 1px solid @surface0;
 }
 
 tooltip {
   background: @base;
-  border-radius: 12px;
+  border-radius: 1rem;
   border: 1px solid @surface2;
 }
 
 tooltip * {
-  margin: 4px;
+  margin: 0.25rem;
   color: @lavender;
 }
 
