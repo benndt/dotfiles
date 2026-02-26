@@ -1,40 +1,41 @@
 @import "mocha.css";
 
 * {
-    font-family: "JetBrains Mono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-size: 16px;
+  font-family: "JetBrains Mono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
 }
 
-#waybar {
+window#waybar {
   background: transparent;
-  margin: 4px 4px;
+  /*background: rgba(30, 30, 46, 0.6);*/
   color: @lavender;
-  /*background: rgba(30, 30, 30, 0.4);*/
 }
 
-#power,
-#workspaces,
-#clock,
-#mpris,
-#cpu,
-#clock,
-#tray,
-#memory,
-#pulseaudio {
-  background-color: @surface0;
-  /*background-color: rgba(49, 50, 68, 0.4);*/
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+.modules-left {
+  background: @base;
+  border-radius: 0px 0px 12px 0px;
+}
+
+#mpris {
+  background: @base;
+  border-radius: 0px 0px 12px 12px;
+}
+
+.modules-right {
+  background: @base;
+  border-radius: 0px 0px 0px 12px;
+}
+
+tooltip {
+  background: @base;
   border-radius: 12px;
-  /*border-bottom-width: 3px;
-  border-bottom-color: @surface1;
-  border-bottom-style: solid;*/
-  /*border-bottom-width: 3px;
-  border-bottom-color: rgba(69, 71, 90, 0.4);
-  border-bottom-style: solid;*/
+  border: 1px solid @surface2;
+}
+
+tooltip * {
+  margin: 4px;
+  color: @lavender;
 }
 
 #power,
@@ -45,7 +46,7 @@
 #tray,
 #memory,
 #pulseaudio {
-  padding: 0.25rem 1rem;
+  padding: 0.75rem 1rem;
 }
 
 #workspaces button {
@@ -54,16 +55,14 @@
 }
 
 #workspaces button.active {
-  color: @text;
+  color: @lavender;
 }
 
 #workspaces button:hover {
   transition: none; 
   box-shadow: inherit;
   text-shadow: inherit;
-  background: @surface0;
-  border-radius: 12px;
-  color: @yellow;
+  color: @mauve;
 }
 
 #power {

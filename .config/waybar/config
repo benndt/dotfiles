@@ -20,22 +20,22 @@
     },
     "custom/quit": {
         "format": "  ",
-        "tooltip": false,
+        "tooltip-format": "Logout",
         "on-click": "hyprctl dispatch exit"
     },
     "custom/lock": {
         "format": "  ",
-        "tooltip": false,
+        "tooltip-format": "Lock",
         "on-click": "hyprlock"
     },
     "custom/reboot": {
         "format": "  ",
-        "tooltip": false,
+        "tooltip-format": "Reboot",
         "on-click": "reboot"
     },
     "custom/shutdown": {
         "format": "  ",
-        "tooltip": false,
+        "tooltip-format": "Shutdown",
         "on-click": "shutdown now"
     },
     "hyprland/workspaces": {
