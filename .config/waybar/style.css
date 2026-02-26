@@ -14,29 +14,29 @@ window#waybar {
 .modules-left {
   background: @base;
   border-radius: 0 0 1rem 0;
-  border-bottom: 1px solid @surface0;
-  border-right: 1px solid @surface0;
+  border-bottom: 2px solid @surface0;
+  border-right: 2px solid @surface0;
 }
 
 #mpris {
   background: @base;
   border-radius: 0 0 1rem 1rem;
-  border-bottom: 1px solid @surface0;
-  border-right: 1px solid @surface0;
-  border-left: 1px solid @surface0;
+  border-bottom: 2px solid @surface0;
+  border-right: 2px solid @surface0;
+  border-left: 2px solid @surface0;
 }
 
 .modules-right {
   background: @base;
   border-radius: 0 0 0 1rem;
-  border-bottom: 1px solid @surface0;
-  border-left: 1px solid @surface0;
+  border-bottom: 2px solid @surface0;
+  border-left: 2px solid @surface0;
 }
 
 tooltip {
   background: @base;
   border-radius: 1rem;
-  border: 1px solid @surface2;
+  border: 2px solid @surface2;
 }
 
 tooltip * {
@@ -52,7 +52,7 @@ tooltip * {
 #tray,
 #memory,
 #pulseaudio {
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 0.75rem;
 }
 
 #workspaces button {
