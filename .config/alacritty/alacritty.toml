@@ -4,7 +4,7 @@ import = [
 ]
 
 [window]
-padding = { x = 2, y = 2 }
+padding = { x = 8, y = 8 }
 
 [cursor]
 style = { shape = "Beam" }
@@ -16,8 +16,10 @@ bindings = [
 
 [keyboard]
 bindings = [
-  { key = "PageUp", action = "ScrollPageUp" },
-  { key = "PageDown", action = "ScrollPageDown" },
+  { key = "ArrowDown", mods = "Control | Alt", action = "ScrollPageDown" },
+  { key = "ArrowDown", mods = "Control", action = "ScrollLineDown" },
+  { key = "ArrowUp", mods = "Control | Alt", action = "ScrollPageUp" },
+  { key = "ArrowUp", mods = "Control", action = "ScrollLineUp" },
   { key = "T", mods = "Control | Shift", action = "CreateNewWindow" }
 ]
 
