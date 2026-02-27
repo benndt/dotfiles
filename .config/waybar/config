@@ -9,13 +9,13 @@
         "orientation": "inherit",
         "drawer": {
             "children-class": "not-power",
-            "transition-left-to-right": false,
+            "transition-left-to-right": false
         },
         "modules": [
             "custom/shutdown",
             "custom/quit",
             "custom/lock",
-            "custom/reboot",
+            "custom/reboot"
         ]
     },
     "custom/quit": {
@@ -46,7 +46,7 @@
          "format-icons": {
              "1": "",
              "3": "󰈹",
-             "2": "󰊴",
+             "2": "󰊴"
          },
          "persistent-workspaces": {
            "DP-1": [1, 2],
@@ -58,12 +58,12 @@
         "spacing": 10
     },
     "cpu": {
-        "format": "  {usage}%",
-        "on-click": "alacritty --command btop",
+        "format": " {usage}%",
+        "on-click": "alacritty --command btop"
     },
     "memory": {
-        "format": "  {:2}%",
-        "on-click": "alacritty --command btop",
+        "format": " {percentage}%",
+        "on-click": "alacritty --command btop"
     },
     "mpris": {
         "format": "{player_icon} | {status_icon} {dynamic}",
@@ -73,26 +73,25 @@
         "player-icons": {
             "default": "",
             "firefox": "󰈹",
-            "spotify": "",
+            "spotify": ""
         },
         "status-icons": {
             "playing": "▶",
             "paused": "⏸",
             "stopped": ""
-        },
+        }
     },
     "clock": {
         "tooltip-format": "{calendar}",
         "format": "{:%d.%h %H:%M}",
         "timezone": "Europe/Berlin",
         "actions": {
-            "on-click-right": "mode",
+            "on-click-right": "mode"
         },
         "calendar": {
             "mode": "month",
             "mode-mon-col": 3,
             "weeks-pos": "left",
-            "on-scroll": 1,
             "format": {
                 "today": "<span color='#cba6f7'><b>{}</b></span>",
                 "months": "<span color='#cba6f7'><b>{}</b></span>",
@@ -108,10 +107,11 @@
             "alsa_output.usb-SteelSeries_Arctis_Nova_7-00.analog-stereo": "",
             "alsa_output.usb-SteelSeries_Arctis_Nova_7-00.analog-stereo-muted": "󰟎",
             "alsa_output.pci-0000_00_1f.3.analog-stereo": "󰓃",
-            "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "󰓄",
+            "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "󰓄"
         },
         "on-click-middle": "pavucontrol",
         "on-click": "pactl set-default-sink alsa_output.usb-SteelSeries_Arctis_Nova_7-00.analog-stereo",
-        "on-click-right": "pactl set-default-sink alsa_output.pci-0000_00_1f.3.analog-stereo"
+        "on-click-right": "pactl set-default-sink alsa_output.pci-0000_00_1f.3.analog-stereo",
+        "scroll-step": 5.0
     }
 }
