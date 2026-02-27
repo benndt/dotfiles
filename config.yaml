@@ -27,8 +27,6 @@ packages:
     - rofi
     - slurp
     - stow
-    - tmux
-    - tmuxp
     - waybar
     - xcur2png
     - xdg-desktop-portal-hyprland
@@ -59,11 +57,6 @@ packages:
       link: https://www.nerdfonts.com/font-downloads
 
   self_managed:
-    - name: tpm
-      install_cmd: |
-        git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm &&
-        ~/.tmux/plugins/tpm/bin/install_plugins all
-      update_cmd: "~/.tmux/plugins/tpm/bin/update_plugins all"
     - name: ohmyzsh
       install_cmd: "sh -c \"$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\""
       update_cmd: "local result=$(omz update) && echo $result"

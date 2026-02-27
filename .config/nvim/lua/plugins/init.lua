@@ -68,7 +68,6 @@ return {
         "just",
         "lua",
         "luadoc",
-        "tmux",
         "toml",
         "vim",
         "vimdoc",

@@ -23,8 +23,7 @@ plugins=(
     fzf-tab
     git
     gitweb
-    tmux
-    tmuxp
+    projects
     zsh-autosuggestions
     zsh-syntax-highlighting
 )

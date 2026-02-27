@@ -1,6 +1,0 @@
-session_name: ${BASENAME}
-start_directory: ${PWD}
-windows:
-  - window_name: cli
-    panes:
-      -
