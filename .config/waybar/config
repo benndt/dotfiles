@@ -58,23 +58,18 @@
         "spacing": 10
     },
     "cpu": {
-        "format": " {usage}%",
+        "format": " <span size='10pt'>{usage}%</span>",
         "on-click": "alacritty --command btop"
     },
     "memory": {
-        "format": " {percentage}%",
+        "format": " <span size='10pt'>{percentage}%</span>",
         "on-click": "alacritty --command btop"
     },
     "mpris": {
-        "format": "{player_icon} | {status_icon} {dynamic}",
+        "format": "{status_icon} {dynamic}",
         "interval": 1,
         "dynamic-len": 40,
         "dynamic-order": ["title", "artist", "position"],
-        "player-icons": {
-            "default": "",
-            "firefox": "󰈹",
-            "spotify": ""
-        },
         "status-icons": {
             "playing": "▶",
             "paused": "⏸",
@@ -83,7 +78,7 @@
     },
     "clock": {
         "tooltip-format": "{calendar}",
-        "format": "{:%d.%h %H:%M}",
+        "format": "<span size='10pt'>{0:%d.%h}</span>  {0:%H:%M}",
         "timezone": "Europe/Berlin",
         "actions": {
             "on-click-right": "mode"
@@ -102,7 +97,7 @@
         }
     },
     "pulseaudio": {
-        "format": "{icon} {volume}%",
+        "format": "{icon} <span size='10pt'>{volume}%</span>",
         "format-icons": {
             "alsa_output.usb-SteelSeries_Arctis_Nova_7-00.analog-stereo": "",
             "alsa_output.usb-SteelSeries_Arctis_Nova_7-00.analog-stereo-muted": "󰟎",
