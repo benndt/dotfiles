@@ -53,19 +53,26 @@
     "on-click": "activate",
     "disable-scroll": true,
     "sort-by-name": true,
+    "show-special": true,
     "format": " {icon} ",
     "format-icons": {
-      "1": "",
-      "3": "󰈹",
-      "2": "󰊴"
+      "default": "",
+      "empty": "",
+      "active": "",
+      "special": ""
     },
     "persistent-workspaces": {
       "DP-1": [
         1,
-        2
+        2,
+        3,
+        4
       ],
       "DP-2": [
-        3
+        5,
+        6,
+        7,
+        8
       ]
     }
   },
