@@ -4,6 +4,7 @@ local options = {
     gdscript = { "gdformat" },
     gdshader = { "clang-format" },
     json = { "jq" },
+    jsonc = { "jq" },
     lua = { "stylua" },
     markdown = { "rumdl" },
   },

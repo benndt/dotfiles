@@ -1,112 +1,132 @@
 {
-    "layer": "top",
-    "position": "top",
-    "reload_style_on_change": true,
-    "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["mpris"],
-    "modules-right": ["tray", "cpu", "memory", "pulseaudio", "clock", "group/power"],
-    "group/power": {
-        "orientation": "inherit",
-        "drawer": {
-            "children-class": "not-power",
-            "transition-left-to-right": false
-        },
-        "modules": [
-            "custom/shutdown",
-            "custom/quit",
-            "custom/lock",
-            "custom/reboot"
-        ]
+  "layer": "top",
+  "position": "top",
+  "reload_style_on_change": true,
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "mpris"
+  ],
+  "modules-right": [
+    "tray",
+    "cpu",
+    "memory",
+    "pulseaudio",
+    "clock",
+    "group/power"
+  ],
+  "group/power": {
+    "orientation": "inherit",
+    "drawer": {
+      "children-class": "not-power",
+      "transition-left-to-right": false
     },
-    "custom/quit": {
-        "format": "  ",
-        "tooltip-format": "Logout",
-        "on-click": "hyprctl dispatch exit"
+    "modules": [
+      "custom/shutdown",
+      "custom/quit",
+      "custom/lock",
+      "custom/reboot"
+    ]
+  },
+  "custom/quit": {
+    "format": "  ",
+    "tooltip-format": "Logout",
+    "on-click": "hyprctl dispatch exit"
+  },
+  "custom/lock": {
+    "format": "  ",
+    "tooltip-format": "Lock",
+    "on-click": "hyprlock"
+  },
+  "custom/reboot": {
+    "format": "  ",
+    "tooltip-format": "Reboot",
+    "on-click": "reboot"
+  },
+  "custom/shutdown": {
+    "format": "  ",
+    "tooltip-format": "Shutdown",
+    "on-click": "shutdown now"
+  },
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "disable-scroll": true,
+    "sort-by-name": true,
+    "format": " {icon} ",
+    "format-icons": {
+      "1": "",
+      "3": "󰈹",
+      "2": "󰊴"
     },
-    "custom/lock": {
-        "format": "  ",
-        "tooltip-format": "Lock",
-        "on-click": "hyprlock"
-    },
-    "custom/reboot": {
-        "format": "  ",
-        "tooltip-format": "Reboot",
-        "on-click": "reboot"
-    },
-    "custom/shutdown": {
-        "format": "  ",
-        "tooltip-format": "Shutdown",
-        "on-click": "shutdown now"
-    },
-    "hyprland/workspaces": {
-         "on-click": "activate",
-         "disable-scroll": true,
-         "sort-by-name": true,
-         "format": " {icon} ",
-         "format-icons": {
-             "1": "",
-             "3": "󰈹",
-             "2": "󰊴"
-         },
-         "persistent-workspaces": {
-           "DP-1": [1, 2],
-           "DP-2": [3]
-         }
-    },
-    "tray": {
-        "icon-size": 18,
-        "spacing": 10
-    },
-    "cpu": {
-        "format": " <span size='10pt'>{usage}%</span>",
-        "on-click": "alacritty --command btop"
-    },
-    "memory": {
-        "format": " <span size='10pt'>{percentage}%</span>",
-        "on-click": "alacritty --command btop"
-    },
-    "mpris": {
-        "format": "{status_icon} {dynamic}",
-        "interval": 1,
-        "dynamic-len": 40,
-        "dynamic-order": ["title", "artist", "position"],
-        "status-icons": {
-            "playing": "▶",
-            "paused": "⏸",
-            "stopped": ""
-        }
-    },
-    "clock": {
-        "tooltip-format": "{calendar}",
-        "format": "<span size='10pt'>{0:%d.%h}</span>  {0:%H:%M}",
-        "timezone": "Europe/Berlin",
-        "actions": {
-            "on-click-right": "mode"
-        },
-        "calendar": {
-            "mode": "month",
-            "mode-mon-col": 3,
-            "weeks-pos": "left",
-            "format": {
-                "today": "<span color='#cba6f7'><b>{}</b></span>",
-                "months": "<span color='#cba6f7'><b>{}</b></span>",
-                "days": "<span color='#cdd6f4'>{}</span>",
-                "weeks": "<span color='#a6e3a1'><b>KW{}</b></span>",
-                "weekdays": "<span color='#f9e2af'><b>{}</b></span>"
-            }
-        }
-    },
-    "pulseaudio": {
-        "format": "{icon} <span size='10pt'>{volume}%</span>",
-        "format-icons": {
-            "alsa_output.usb-SteelSeries_Arctis_Nova_7-00.analog-stereo": "",
-            "alsa_output.usb-SteelSeries_Arctis_Nova_7-00.analog-stereo-muted": "󰟎",
-            "alsa_output.pci-0000_00_1f.3.analog-stereo": "󰓃",
-            "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "󰓄"
-        },
-        "on-click-middle": "pavucontrol",
-        "on-click": "pactl set-default-sink alsa_output.usb-SteelSeries_Arctis_Nova_7-00.analog-stereo",
-        "on-click-right": "pactl set-default-sink alsa_output.pci-0000_00_1f.3.analog-stereo",
-        "scroll-step": 5.0
+    "persistent-workspaces": {
+      "DP-1": [
+        1,
+        2
+      ],
+      "DP-2": [
+        3
+      ]
     }
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10
+  },
+  "cpu": {
+    "format": " <span size='10pt'>{usage}%</span>",
+    "on-click": "alacritty --command btop"
+  },
+  "memory": {
+    "format": " <span size='10pt'>{percentage}%</span>",
+    "on-click": "alacritty --command btop"
+  },
+  "mpris": {
+    "format": "{status_icon} {dynamic}",
+    "interval": 1,
+    "dynamic-len": 40,
+    "dynamic-order": [
+      "title",
+      "artist",
+      "position"
+    ],
+    "status-icons": {
+      "playing": "▶",
+      "paused": "⏸",
+      "stopped": ""
+    }
+  },
+  "clock": {
+    "tooltip-format": "{calendar}",
+    "format": "<span size='10pt'>{0:%d.%h}</span>  {0:%H:%M}",
+    "timezone": "Europe/Berlin",
+    "actions": {
+      "on-click-right": "mode"
+    },
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "weeks-pos": "left",
+      "format": {
+        "today": "<span color='#cba6f7'><b>{}</b></span>",
+        "months": "<span color='#cba6f7'><b>{}</b></span>",
+        "days": "<span color='#cdd6f4'>{}</span>",
+        "weeks": "<span color='#a6e3a1'><b>KW{}</b></span>",
+        "weekdays": "<span color='#f9e2af'><b>{}</b></span>"
+      }
+    }
+  },
+  "pulseaudio": {
+    "format": "{icon} <span size='10pt'>{volume}%</span>",
+    "format-icons": {
+      "alsa_output.usb-SteelSeries_Arctis_Nova_7-00.analog-stereo": "",
+      "alsa_output.usb-SteelSeries_Arctis_Nova_7-00.analog-stereo-muted": "󰟎",
+      "alsa_output.pci-0000_00_1f.3.analog-stereo": "󰓃",
+      "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "󰓄"
+    },
+    "on-click-middle": "pavucontrol",
+    "on-click": "pactl set-default-sink alsa_output.usb-SteelSeries_Arctis_Nova_7-00.analog-stereo",
+    "on-click-right": "pactl set-default-sink alsa_output.pci-0000_00_1f.3.analog-stereo",
+    "scroll-step": 5.0
+  }
 }
