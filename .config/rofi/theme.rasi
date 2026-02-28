@@ -3,12 +3,6 @@
 * {
   active-background: @background;
   active-foreground: @blue;
-  alternate-active-background: @lightbg;
-  alternate-active-foreground: @blue;
-  alternate-normal-background: @lightbg;
-  alternate-normal-foreground: @foreground;
-  alternate-urgent-background: @lightbg;
-  alternate-urgent-foreground: @red;
   background-color: transparent;
   background: @base;
   border-color: @foreground;
@@ -19,7 +13,7 @@
   normal-foreground: @foreground;
   selected-active-background: @blue;
   selected-active-foreground: @background;
-  selected-normal-background: @surface0;
+  selected-normal-background: @mantle;
   selected-normal-foreground: @mauve;
   selected-urgent-background: @red;
   selected-urgent-foreground: @background;
@@ -30,10 +24,11 @@
 }
 
 element {
-    padding: 1px;
+    padding: 2px;
     cursor: pointer;
-    spacing: 6px;
+    spacing: 8px;
     border: 0;
+    border-radius: 12px;
 }
 
 element normal.normal {
@@ -67,18 +62,18 @@ element selected.active {
 }
 
 element alternate.normal {
-    background-color: @alternate-normal-background;
-    text-color: @alternate-normal-foreground;
+    background-color: @normal-background;
+    text-color: @normal-foreground;
 }
 
 element alternate.urgent {
-    background-color: @alternate-urgent-background;
-    text-color: @alternate-urgent-foreground;
+    background-color: @urgent-background;
+    text-color: @urgent-foreground;
 }
 
 element alternate.active {
-    background-color: @alternate-active-background;
-    text-color: @alternate-active-foreground;
+    background-color: @active-background;
+    text-color: @active-foreground;
 }
 
 element-text {
@@ -121,19 +116,19 @@ textbox {
 
 listview {
     border-color: @surface0;
-    padding: 2px 0px 0px;
+    padding: 4px 0px 0px;
     scrollbar: true;
     spacing: 2px;
-    fixed-height: 0;
-    border: 2px solid 0px 0px;
+    fixed-height: true;
 }
 
 scrollbar {
     width: 4px;
-    padding: 0;
+    padding: 0px 0px 0px 4px;
     handle-width: 8px;
     border: 0;
     handle-color: @surface1;
+    handle-rounded-corners: true;
 }
 
 sidebar {
@@ -169,8 +164,10 @@ textbox-num-sep {
 }
 
 inputbar {
-    padding: 1px;
-    spacing: 0px;
+    background-color: @surface0;
+    spacing: 0;
+    border-radius: 12px;
+    padding: 8px 0px 8px 8px;
     text-color: @normal-foreground;
     children: ["entry", "num-filtered-rows", "textbox-num-sep", "num-rows", "case-indicator"];
 }
@@ -181,10 +178,10 @@ case-indicator {
 }
 
 entry {
+    padding: 0px 0px 0px 4px;
     text-color: @normal-foreground;
     cursor: @text;
     spacing: 0;
     placeholder-color: @overlay1;
-    placeholder: "Type to filter";
 }
 
