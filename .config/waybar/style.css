@@ -12,6 +12,7 @@ window#waybar {
 }
 
 .modules-left {
+  padding-left: 4px;
   background: @base;
   border-radius: 0 0 1rem 0;
   border-bottom: 2px solid @surface0;
