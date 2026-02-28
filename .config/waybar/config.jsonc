@@ -94,8 +94,7 @@
     "dynamic-len": 40,
     "dynamic-order": [
       "title",
-      "artist",
-      "position"
+      "artist"
     ],
     "status-icons": {
       "playing": "▶",
