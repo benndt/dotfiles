@@ -104,7 +104,7 @@
   },
   "clock": {
     "tooltip-format": "{calendar}",
-    "format": "<span size='10pt'>{0:%d.%h}</span>  {0:%H:%M}",
+    "format": "<span size='10pt'>{0:L%d.%h}</span>  {0:%H:%M}",
     "timezone": "Europe/Berlin",
     "actions": {
       "on-click-right": "mode"
