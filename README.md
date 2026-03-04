@@ -23,4 +23,4 @@ To create missing symlinks you can run this command.
 stow . --target="$HOME" --no-folding
 ```
 
-After the installation you can also run `update-depedencies` to update your dependencies.
+After the installation you can also run `update-dependencies` to update your dependencies.
