@@ -19,14 +19,6 @@ window#waybar {
   border-right: 2px solid @surface0;
 }
 
-#mpris {
-  background: @base;
-  border-radius: 0 0 1rem 1rem;
-  border-bottom: 2px solid @surface0;
-  border-right: 2px solid @surface0;
-  border-left: 2px solid @surface0;
-}
-
 .modules-right {
   background: @base;
   border-radius: 0 0 0 1rem;

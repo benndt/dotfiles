@@ -5,13 +5,11 @@
   "modules-left": [
     "hyprland/workspaces"
   ],
-  "modules-center": [
-    "mpris"
-  ],
   "modules-right": [
     "tray",
     "cpu",
     "memory",
+    "mpris",
     "pulseaudio",
     "clock",
     "group/power"
@@ -89,13 +87,8 @@
     "on-click": "alacritty --command btop"
   },
   "mpris": {
-    "format": "{status_icon} {dynamic}",
+    "format": "{status_icon}",
     "interval": 1,
-    "dynamic-len": 40,
-    "dynamic-order": [
-      "title",
-      "artist"
-    ],
     "status-icons": {
       "playing": "▶",
       "paused": "⏸",
