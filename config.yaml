@@ -15,6 +15,7 @@ packages:
     - git
     - git-delta
     - go-yq
+    - godot
     - grim
     - hypridle
     - hyprland
@@ -34,14 +35,13 @@ packages:
     - zoxide
 
   yay:
+    - aseprite
     - lefthook
 
   pipx:
     - gdtoolkit
 
   manual_downloads:
-    - name: Aseprite
-      link: https://www.aseprite.org/
     - name: catppuccin/aseprite
       link: https://github.com/catppuccin/aseprite
     - name: catppuccin/godot
@@ -52,8 +52,6 @@ packages:
       link: https://github.com/catppuccin/kde
     - name: catppuccin/cursors
       link: https://github.com/catppuccin/cursors
-    - name: Godot
-      link: https://godotengine.org/
     - name: JetBrainsMono Nerd Font
       link: https://www.nerdfonts.com/font-downloads
 
