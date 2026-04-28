@@ -29,6 +29,7 @@ packages:
     - rofi
     - slurp
     - stow
+    - tree-sitter-cli
     - waybar
     - xcur2png
     - xdg-desktop-portal-hyprland
@@ -57,7 +58,9 @@ packages:
 
   self_managed:
     - name: ohmyzsh
-      install_cmd: "sh -c \"$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\""
+      install_cmd: "sh -c \"$(curl -fsSL
+        https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.\
+        sh)\""
       update_cmd: "local result=$(omz update) && echo $result"
 
   git_repositories:
