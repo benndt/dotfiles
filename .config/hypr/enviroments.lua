@@ -1,0 +1,8 @@
+hl.env("GTK_THEME", "Breeze-Dark")
+hl.env("HYPRCURSOR_SIZE", "24")
+hl.env("HYPRCURSOR_THEME", "Catppuccin-Mocha-Dark")
+hl.env("LIBVA_DRIVER_NAME", "nvidia")
+hl.env("QT_QPA_PLATFORMTHEME", "kde")
+hl.env("XCURSOR_SIZE", "24")
+hl.env("XDG_MENU_PREFIX", "arch-")
+hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")

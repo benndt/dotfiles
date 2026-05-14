@@ -121,8 +121,8 @@ packages:
     - name: catppuccin/hyprland
       type: commit
       cmd: |
-        rm -f "$HOME/.config/hypr/themes/mocha.conf" &&
-        wget --no-verbose -P "$HOME/.config/hypr/themes" https://github.com/catppuccin/hyprland/raw/main/themes/mocha.conf
+        rm -f "$HOME/.config/hypr/themes/mocha.lua" &&
+        wget --no-verbose -P "$HOME/.config/hypr/themes" https://github.com/incogcyberpunk/hyprland/raw/feat/lua/themes/lua/mocha.lua
     - name: catppuccin/fzf
       type: commit
       cmd: |
