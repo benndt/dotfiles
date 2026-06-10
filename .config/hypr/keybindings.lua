@@ -23,17 +23,26 @@ hl.bind(
 	)
 )
 
+hl.bind("SUPER + T", function()
+	local layout = hl.get_config("general.layout")
+	if layout == "dwindle" then
+		hl.config({ general = { layout = "master" } })
+	else
+		hl.config({ general = { layout = "dwindle" } })
+	end
+
+	hl.dispatch(hl.dsp.exec_cmd("pkill -RTMIN+8 waybar"))
+end)
+
+hl.bind(mainMod .. " + M", hl.dsp.layout("swapwithmaster master"))
+
 hl.bind(mainMod .. " + C", hl.dsp.window.close())
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("pidof hyprlock || hyprlock -q"))
-hl.bind(mainMod .. " + M", hl.dsp.exit())
+hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("hyprctl dispatch exit"))
 
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
-hl.bind(mainMod .. " + Z", function()
-	hl.dispatch(hl.dsp.window.resize({ x = "90%", y = "80%", exact = true }))
-	hl.dispatch(hl.dsp.window.center())
-end)
 
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))

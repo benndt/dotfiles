@@ -3,4 +3,7 @@ hl.config({
 		preserve_split = true,
 		smart_split = true,
 	},
+	master = {
+		mfact = 0.70,
+	},
 })
