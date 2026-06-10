@@ -38,10 +38,8 @@ tooltip * {
 }
 
 #power,
-#clock,
 #mpris,
 #cpu,
-#clock,
 #tray,
 #memory,
 #pulseaudio {
@@ -76,3 +74,7 @@ tooltip * {
   color: @mauve;
 }
 
+#custom-layout {
+  color: @blue;
+  padding-right: 0.75rem;
+}

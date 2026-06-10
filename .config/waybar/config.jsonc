@@ -11,6 +11,7 @@
     "memory",
     "mpris",
     "pulseaudio",
+    "custom/layout",
     "clock",
     "group/power"
   ],
@@ -46,6 +47,18 @@
     "format": "  ",
     "tooltip-format": "Shutdown",
     "on-click": "shutdown now"
+  },
+  "custom/layout": {
+    "exec": "~/.local/bin/waybar-layout.sh",
+    "return-type": "json",
+    "interval": "once",
+    "signal": 8,
+    "format": " {icon} ",
+    "tooltip-format": "{text}",
+    "format-icons": {
+      "dwindle": "󰕮",
+      "master": "󰙀",
+    }
   },
   "hyprland/workspaces": {
     "on-click": "activate",
