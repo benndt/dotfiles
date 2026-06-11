@@ -35,6 +35,7 @@ source "$ZSH"/oh-my-zsh.sh
 
 # keybindings
 bindkey -e
+bindkey -s '^Xgc' 'git commit -m ""\C-b'
 
 # completion styling
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
@@ -53,6 +54,38 @@ zstyle ':omz:update' verbose minimal
 # aliases
 alias c="clear"
 alias dev="cd $DEV"
+
+# global aliases
+alias -g C='| wl-copy'
+
+# suffix aliases
+alias -s gd='$GODOT_BIN'
+alias -s aseprite='$ASEPRITE_BIN'
+alias -s gdshader='$GODOT_BIN'
+alias -s json='$EDITOR'
+alias -s md='bat'
+alias -s tres='$GODOT_BIN'
+alias -s tscn='$GODOT_BIN'
+
+# edit command buffer
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '^X^E' edit-command-line
+
+# clear screen and keep buffer
+function clear-screen-keep-buffer() {
+  zle clear-screen
+}
+zle -N clear-screen-keep-buffer
+bindkey '^Xl' clear-screen-keep-buffer
+
+# copy command
+function copy-command() {
+  echo -n $BUFFER | wl-copy
+  zle -M "Copied to clipboard"
+}
+zle -N copy-command
+bindkey '^X^S' copy-command
 
 # commands
 source "$ZSH_CUSTOM/commands/update-dependencies.sh"
