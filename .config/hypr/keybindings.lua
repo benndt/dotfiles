@@ -19,7 +19,8 @@ hl.bind("Print", hl.dsp.exec_cmd(screenshot))
 hl.bind(
 	mainMod .. " + Print",
 	hl.dsp.exec_cmd(
-		screenshot .. [[ --region "$(hyprctl activewindow -j | jq -r '"\(.size[0])x\(.size[1])+\(.at[0])+\(.at[1])"')"]]
+		screenshot
+			.. [[ --region "$(hyprctl activewindow -j | jq -r '"\(.size[0])x\(.size[1])+\(.at[0])+\(.at[1])"')" --path ~/images/screenshots --accept-on-select ]]
 	)
 )
 
