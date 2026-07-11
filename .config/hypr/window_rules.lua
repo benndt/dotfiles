@@ -131,7 +131,8 @@ hl.window_rule({
 hl.window_rule({
 	name = "godot-debug",
 	match = {
-		class = "^(metroidvania)$",
+		initial_title = "^Godot$",
+		class = "negative:org\\.godotengine\\.Editor",
 	},
 
 	float = true,
