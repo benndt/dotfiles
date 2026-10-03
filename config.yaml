@@ -6,6 +6,9 @@ packages:
     - archlinux-xdg-menu
     - bat
     - bc
+    - blueman
+    - bluez
+    - bluez-utils
     - btop
     - dunst
     - egl-wayland
@@ -21,9 +24,13 @@ packages:
     - hyprland
     - hyprlock
     - hyprpaper
+    - joyutils
     - jq
     - just
+    - kdenlive
     - neovim
+    - obs-studio
+    - obsidian
     - python-pipx
     - ripgrep
     - rofi
@@ -37,6 +44,7 @@ packages:
 
   yay:
     - aseprite
+    - bitwig-studio
     - lefthook
 
   pipx:
