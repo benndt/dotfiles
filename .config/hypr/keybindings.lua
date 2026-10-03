@@ -1,6 +1,6 @@
 local terminal = "alacritty"
 local fileManager = "dolphin"
-local screenshot = "flameshot gui"
+local screenshot = "flameshot screen"
 local menu = "rofi -show drun"
 local windowMenu = "rofi -show window"
 local browser = "firefox"
@@ -15,12 +15,17 @@ hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(notes))
 hl.bind(mainMod .. " + TAB", hl.dsp.exec_cmd(windowMenu))
 
-hl.bind("Print", hl.dsp.exec_cmd(screenshot))
+local activeMonitor = [[$(hyprctl monitors -j | jq ".[] | select(.focused) | .id")]]
+
+hl.bind("Print", hl.dsp.exec_cmd(screenshot .. " --number " .. activeMonitor .. " --edit"))
 hl.bind(
 	mainMod .. " + Print",
 	hl.dsp.exec_cmd(
 		screenshot
-			.. [[ --region "$(hyprctl activewindow -j | jq -r '"\(.size[0])x\(.size[1])+\(.at[0])+\(.at[1])"')" --path ~/images/screenshots --accept-on-select ]]
+			.. " --number "
+			.. activeMonitor
+			.. " "
+			.. [[ --region "$(hyprctl activewindow -j | jq -r '"\(.size[0])x\(.size[1])+\(.at[0])+\(.at[1])"')" --path ~/images/screenshots ]]
 	)
 )
 

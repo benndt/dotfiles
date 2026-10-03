@@ -34,9 +34,8 @@ hl.window_rule({
 	fullscreen_state = "0 0",
 	float = true,
 	pin = true,
-	monitor = "DP-1",
 	move = "0 0",
-	size = "(monitor_w*2) (monitor_h)",
+	size = "monitor_w monitor_h",
 })
 
 hl.window_rule({
