@@ -3,6 +3,7 @@ hl.monitor({
 	mode = "2560x1440@144",
 	position = "0x0",
 	scale = 1,
+	supports_hdr = -1,
 })
 
 hl.monitor({
@@ -10,4 +11,5 @@ hl.monitor({
 	mode = "2560x1440@144",
 	position = "2560x0",
 	scale = 1,
+	supports_hdr = -1,
 })
